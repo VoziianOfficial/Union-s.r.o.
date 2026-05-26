@@ -2964,3 +2964,16 @@
         min-height: 250px;
     }
 }
+
+/* =====================================================
+   SERVICE SLIDER — FULL CARD CLICK
+===================================================== */
+
+.home-page .service-preview-card[data-card-link] {
+    cursor: pointer;
+}
+
+.home-page .service-preview-card[data-card-link]:focus-visible {
+    outline: 3px solid rgba(245, 161, 26, 0.65);
+    outline-offset: 4px;
+}

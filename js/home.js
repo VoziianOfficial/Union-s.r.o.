@@ -464,6 +464,58 @@
         initServicesSwiper();
     }
 
+    const initServiceCardLinks = () => {
+        const cards = document.querySelectorAll(".service-preview-card[data-card-link]");
+
+        cards.forEach((card) => {
+            let startX = 0;
+            let startY = 0;
+            let moved = false;
+
+            card.addEventListener("pointerdown", (event) => {
+                startX = event.clientX;
+                startY = event.clientY;
+                moved = false;
+            });
+
+            card.addEventListener("pointermove", (event) => {
+                const diffX = Math.abs(event.clientX - startX);
+                const diffY = Math.abs(event.clientY - startY);
+
+                if (diffX > 8 || diffY > 8) {
+                    moved = true;
+                }
+            });
+
+            card.addEventListener("click", (event) => {
+                if (event.target.closest("a, button")) return;
+                if (moved) return;
+
+                const url = card.getAttribute("data-card-link");
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+
+            card.addEventListener("keydown", (event) => {
+                if (event.key !== "Enter" && event.key !== " ") return;
+
+                event.preventDefault();
+
+                const url = card.getAttribute("data-card-link");
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        });
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initServiceCardLinks);
+    } else {
+        initServiceCardLinks();
+    }
+
     /* ==============================
        INIT
     ============================== */
