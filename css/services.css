@@ -2851,3 +2851,63 @@
         padding-bottom: 32px !important;
     }
 }
+
+/* =====================================================
+   SERVICE PAGES — MOBILE CENTERED SECTION TITLES
+   all service page section headings centered on mobile
+===================================================== */
+
+@media (max-width: 720px) {
+
+    .service-page .section-title,
+    .service-page .section-title.is-visible,
+    .service-page .service-strategy__title,
+    .service-page .service-strategy__title.is-visible,
+    .service-page .deliverables-canvas__title,
+    .service-page .deliverables-canvas__title.is-visible,
+    .service-page .service-strategy-line__title,
+    .service-page .service-strategy-line__title.is-visible {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        justify-self: center !important;
+    }
+
+    /* текст под заголовками тоже ровно по центру */
+    .service-page .section-text,
+    .service-page .section-text.is-visible,
+    .service-page .service-strategy__text,
+    .service-page .service-strategy__text.is-visible,
+    .service-page .deliverables-canvas__text,
+    .service-page .deliverables-canvas__text.is-visible,
+    .service-page .service-strategy-line__text,
+    .service-page .service-strategy-line__text.is-visible {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    /* kicker тоже по центру, чтобы блок выглядел ровно */
+    .service-page .section-kicker,
+    .service-page .section-kicker.is-visible {
+        width: fit-content !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    /* если заголовок лежит внутри left/sticky блока */
+    .service-page .service-does__sticky,
+    .service-page .service-faq__sticky,
+    .service-page .deliverables-canvas__intro,
+    .service-page .service-strategy__grid>div:first-child,
+    .service-page .service-method__grid>div:last-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+}
