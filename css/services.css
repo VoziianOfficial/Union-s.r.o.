@@ -3165,3 +3165,143 @@
         padding-bottom: 32px !important;
     }
 }
+
+/* =====================================================
+   SERVICE RELATED — COMPACT TOP + ICONS TOP RIGHT
+===================================================== */
+
+/* убираем верхний padding секции примерно в половину */
+.service-page .service-related.section {
+    padding-top: 48px !important;
+}
+
+/* чуть компактнее верх внутри тёмной панели */
+.service-page .service-related__panel {
+    padding-top: clamp(24px, 3vw, 34px) !important;
+}
+
+/* карточки ниже и аккуратнее */
+.service-page .related-card {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 190px !important;
+    padding: 24px 74px 22px 22px !important;
+    overflow: hidden !important;
+}
+
+/* иконка справа сверху */
+.service-page .related-card__icon {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 46px !important;
+    height: 46px !important;
+    margin: 0 !important;
+    border-radius: 15px !important;
+}
+
+.service-page .related-card__icon i,
+.service-page .related-card__icon svg {
+    display: block !important;
+    width: 21px !important;
+    height: 21px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* чтобы заголовок не залезал под иконку */
+.service-page .related-card__title {
+    max-width: 100% !important;
+    padding-right: 4px !important;
+    font-size: 1.02rem !important;
+    line-height: 1.22 !important;
+}
+
+.service-page .related-card__text {
+    margin-top: 10px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.52 !important;
+}
+
+.service-page .related-card__link {
+    margin-top: auto !important;
+    padding-top: 16px !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-page .service-related.section {
+        padding-top: 38px !important;
+    }
+
+    .service-page .service-related__panel {
+        padding-top: 28px !important;
+    }
+
+    .service-page .related-card {
+        min-height: 170px !important;
+        padding: 22px 68px 20px 20px !important;
+    }
+
+    .service-page .related-card__icon {
+        top: 16px !important;
+        right: 16px !important;
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+    }
+
+    .service-page .related-card__icon i,
+    .service-page .related-card__icon svg {
+        width: 19px !important;
+        height: 19px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-page .service-related.section {
+        padding-top: 32px !important;
+    }
+
+    .service-page .service-related__panel {
+        padding-top: 24px !important;
+    }
+
+    .service-page .related-card {
+        min-height: 0 !important;
+        padding: 20px 64px 18px 18px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-page .related-card__icon {
+        top: 15px !important;
+        right: 15px !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 13px !important;
+    }
+
+    .service-page .related-card__icon i,
+    .service-page .related-card__icon svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .service-page .related-card__title {
+        font-size: 0.98rem !important;
+    }
+
+    .service-page .related-card__text {
+        font-size: 0.84rem !important;
+        line-height: 1.48 !important;
+    }
+
+    .service-page .related-card__link {
+        padding-top: 14px !important;
+    }
+}
