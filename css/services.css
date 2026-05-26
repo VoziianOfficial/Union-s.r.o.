@@ -2412,3 +2412,419 @@
     line-height: 1 !important;
     transform-origin: center center !important;
 }
+
+/* =====================================================
+   SERVICE DELIVERABLES — CANVAS VERSION
+   no cards, no list, no numbers
+===================================================== */
+
+.service-page .service-deliverables--canvas {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(245, 161, 26, 0.055), transparent 18rem),
+        radial-gradient(circle at 88% 70%, rgba(11, 106, 97, 0.06), transparent 18rem),
+        var(--color-bg-white);
+}
+
+.service-page .service-deliverables--canvas.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+.service-page .deliverables-canvas {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+    gap: 42px;
+    align-items: center;
+}
+
+.service-page .deliverables-canvas__intro {
+    max-width: 560px;
+}
+
+.service-page .deliverables-canvas__title {
+    color: var(--color-text-dark);
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+}
+
+.service-page .deliverables-canvas__text {
+    max-width: 520px;
+    margin-top: 16px;
+    color: var(--color-text-muted);
+    font-size: 0.96rem;
+    font-weight: 550;
+    line-height: 1.68;
+}
+
+/* visual canvas */
+.service-page .deliverables-canvas__visual {
+    position: relative;
+    isolation: isolate;
+    min-height: 340px;
+    padding: clamp(26px, 4vw, 44px);
+    overflow: hidden;
+    border: 1px solid rgba(6, 63, 59, 0.11);
+    border-radius: 36px;
+    background:
+        radial-gradient(circle at 84% 14%, rgba(245, 161, 26, 0.12), transparent 15rem),
+        radial-gradient(circle at 18% 92%, rgba(11, 106, 97, 0.08), transparent 14rem),
+        linear-gradient(135deg, rgba(250, 252, 251, 0.98), rgba(244, 247, 245, 0.9));
+    box-shadow:
+        0 22px 58px rgba(8, 60, 57, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.84);
+}
+
+.service-page .deliverables-canvas__visual::before {
+    content: "";
+    position: absolute;
+    inset: 22px;
+    z-index: -1;
+    border: 1px solid rgba(6, 63, 59, 0.08);
+    border-radius: 28px;
+    pointer-events: none;
+}
+
+.service-page .deliverables-canvas__glow {
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    z-index: -1;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(245, 161, 26, 0.16);
+    filter: blur(22px);
+    pointer-events: none;
+}
+
+/* main statement */
+.service-page .deliverables-canvas__statement {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    display: grid;
+    gap: 8px;
+}
+
+.service-page .deliverables-canvas__statement span {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    font-weight: 750;
+    line-height: 1.35;
+}
+
+.service-page .deliverables-canvas__statement strong {
+    max-width: 540px;
+    color: var(--color-text-dark);
+    font-size: clamp(1.75rem, 3vw, 2.55rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.06em;
+}
+
+/* decorative flow line */
+.service-page .deliverables-canvas__flow {
+    position: relative;
+    z-index: 1;
+    height: 84px;
+    margin: 26px 0 8px;
+}
+
+.service-page .deliverables-canvas__flow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(6, 63, 59, 0.2),
+            rgba(245, 161, 26, 0.52),
+            rgba(6, 63, 59, 0.18),
+            transparent);
+}
+
+.service-page .deliverables-canvas__flow span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--color-accent-orange);
+    box-shadow:
+        0 0 0 8px rgba(245, 161, 26, 0.12),
+        0 14px 24px rgba(245, 161, 26, 0.22);
+    transform: translateY(-50%);
+}
+
+.service-page .deliverables-canvas__flow span:nth-child(1) {
+    left: 8%;
+}
+
+.service-page .deliverables-canvas__flow span:nth-child(2) {
+    left: 48%;
+    width: 18px;
+    height: 18px;
+}
+
+.service-page .deliverables-canvas__flow span:nth-child(3) {
+    right: 8%;
+}
+
+/* outputs as integrated phrase chips, not cards */
+.service-page .deliverables-canvas__outputs {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-page .deliverables-canvas__outputs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid rgba(6, 63, 59, 0.1);
+    border-radius: 999px;
+    color: var(--color-bg-dark);
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0 10px 24px rgba(8, 60, 57, 0.07);
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 1;
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        color 260ms ease,
+        background 260ms ease;
+}
+
+.service-page .deliverables-canvas__outputs i,
+.service-page .deliverables-canvas__outputs svg {
+    width: 15px;
+    height: 15px;
+    color: var(--color-accent-orange);
+    stroke-width: 2.45;
+}
+
+.service-page .deliverables-canvas__outputs span:hover {
+    transform: translateY(-3px);
+    color: #111a19;
+    border-color: rgba(245, 161, 26, 0.38);
+    background: rgba(245, 161, 26, 0.14);
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-page .service-deliverables--canvas.section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .service-page .deliverables-canvas {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .service-page .deliverables-canvas__intro {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .service-page .deliverables-canvas__text {
+        margin-inline: auto;
+    }
+
+    .service-page .deliverables-canvas__visual {
+        min-height: 300px;
+    }
+
+    .service-page .deliverables-canvas__outputs {
+        justify-content: center;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-page .service-deliverables--canvas.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .service-page .deliverables-canvas {
+        gap: 22px;
+    }
+
+    .service-page .deliverables-canvas__intro {
+        text-align: left;
+    }
+
+    .service-page .deliverables-canvas__visual {
+        min-height: auto;
+        padding: 22px 16px;
+        border-radius: 28px;
+    }
+
+    .service-page .deliverables-canvas__visual::before {
+        inset: 12px;
+        border-radius: 22px;
+    }
+
+    .service-page .deliverables-canvas__statement strong {
+        font-size: clamp(1.55rem, 8vw, 2.15rem);
+    }
+
+    .service-page .deliverables-canvas__flow {
+        height: 56px;
+        margin: 22px 0 10px;
+    }
+
+    .service-page .deliverables-canvas__flow span {
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 6px rgba(245, 161, 26, 0.12);
+    }
+
+    .service-page .deliverables-canvas__flow span:nth-child(2) {
+        width: 14px;
+        height: 14px;
+    }
+
+    .service-page .deliverables-canvas__outputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .service-page .deliverables-canvas__outputs span {
+        justify-content: center;
+        min-height: 36px;
+    }
+
+    .service-page .deliverables-canvas__outputs span:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   DELIVERABLES CANVAS — MOVING FLOW LINE
+===================================================== */
+
+.service-page .deliverables-canvas__flow {
+    overflow: hidden;
+}
+
+/* базовая линия становится живой */
+.service-page .deliverables-canvas__flow::before {
+    height: 2px !important;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(6, 63, 59, 0.16) 18%,
+            rgba(245, 161, 26, 0.42) 38%,
+            rgba(255, 209, 90, 0.72) 50%,
+            rgba(245, 161, 26, 0.42) 62%,
+            rgba(6, 63, 59, 0.16) 82%,
+            transparent 100%) !important;
+    background-size: 220% 100% !important;
+    animation: deliverablesFlowLine 4.2s linear infinite;
+}
+
+/* световой блик, который проходит поверх линии */
+.service-page .deliverables-canvas__flow::after {
+    content: "";
+    position: absolute;
+    left: -28%;
+    top: 50%;
+    z-index: 2;
+    width: 28%;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 209, 90, 0.95),
+            transparent);
+    box-shadow: 0 0 18px rgba(245, 161, 26, 0.55);
+    transform: translateY(-50%);
+    animation: deliverablesFlowGlow 3.2s ease-in-out infinite;
+}
+
+/* точки тоже чуть двигаются/дышат */
+.service-page .deliverables-canvas__flow span {
+    animation: deliverablesFlowPulse 2.4s ease-in-out infinite;
+}
+
+.service-page .deliverables-canvas__flow span:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.service-page .deliverables-canvas__flow span:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+@keyframes deliverablesFlowLine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 220% 50%;
+    }
+}
+
+@keyframes deliverablesFlowGlow {
+    0% {
+        left: -28%;
+        opacity: 0;
+    }
+
+    14% {
+        opacity: 1;
+    }
+
+    82% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes deliverablesFlowPulse {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+        box-shadow:
+            0 0 0 8px rgba(245, 161, 26, 0.12),
+            0 14px 24px rgba(245, 161, 26, 0.22);
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.18);
+        box-shadow:
+            0 0 0 11px rgba(245, 161, 26, 0.18),
+            0 18px 32px rgba(245, 161, 26, 0.34);
+    }
+}
+
+/* на мобилке анимация мягче */
+@media (max-width: 720px) {
+    .service-page .deliverables-canvas__flow::after {
+        height: 1.5px;
+        animation-duration: 3.8s;
+    }
+
+    .service-page .deliverables-canvas__flow span {
+        animation-duration: 2.8s;
+    }
+}
