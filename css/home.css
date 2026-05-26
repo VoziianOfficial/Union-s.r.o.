@@ -2734,3 +2734,114 @@
         font-size: 0.76rem !important;
     }
 }
+
+/* =====================================================
+   HOME ABOUT POINTS — CLEAN ICONS + HOVER UNDERLINES
+   only icons and hover effects, no section spacing changes
+===================================================== */
+
+.home-page .home-about__point {
+    position: relative;
+    transition: transform 260ms ease;
+}
+
+/* icon without colored background */
+.home-page .home-about__point-icon {
+    display: grid !important;
+    width: 42px !important;
+    height: 42px !important;
+    place-items: center !important;
+    color: var(--color-accent-orange) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.home-page .home-about__point-icon i,
+.home-page .home-about__point-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+    stroke-width: 2.15 !important;
+    transition:
+        transform 260ms ease,
+        color 260ms ease,
+        filter 260ms ease;
+}
+
+/* fix wrapper span, because old CSS styles every span inside point */
+.home-page .home-about__point>span:not(.home-about__point-icon) {
+    display: block !important;
+    margin-top: 0 !important;
+    color: inherit !important;
+}
+
+/* underline for title */
+.home-page .home-about__point strong {
+    position: relative;
+    display: inline !important;
+    color: var(--color-text-dark) !important;
+    background-image: linear-gradient(var(--color-accent-orange),
+            var(--color-accent-orange));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    transition:
+        color 260ms ease,
+        background-size 320ms ease;
+}
+
+/* underline for description span */
+.home-page .home-about__point>span:not(.home-about__point-icon)>span {
+    position: relative;
+    display: inline !important;
+    margin-top: 7px !important;
+    color: var(--color-text-muted) !important;
+    background-image: linear-gradient(rgba(245, 161, 26, 0.62),
+            rgba(245, 161, 26, 0.62));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition:
+        color 260ms ease,
+        background-size 320ms ease;
+}
+
+/* hover */
+.home-page .home-about__point:hover {
+    transform: translateX(4px);
+}
+
+.home-page .home-about__point:hover .home-about__point-icon i,
+.home-page .home-about__point:hover .home-about__point-icon svg {
+    color: var(--color-bg-dark) !important;
+    transform: translateY(-2px) rotate(-5deg) scale(1.08);
+    filter: drop-shadow(0 8px 12px rgba(245, 161, 26, 0.2));
+}
+
+.home-page .home-about__point:hover strong {
+    color: var(--color-accent-orange-hover) !important;
+    background-size: 100% 2px;
+}
+
+.home-page .home-about__point:hover>span:not(.home-about__point-icon)>span {
+    color: var(--color-text-dark) !important;
+    background-size: 100% 1px;
+}
+
+@media (max-width: 720px) {
+    .home-page .home-about__point-icon {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .home-page .home-about__point-icon i,
+    .home-page .home-about__point-icon svg {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .home-page .home-about__point:hover {
+        transform: none;
+    }
+}
