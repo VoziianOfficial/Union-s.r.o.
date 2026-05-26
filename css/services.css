@@ -1671,3 +1671,98 @@
         padding-bottom: 32px !important;
     }
 }
+
+/* =====================================================
+   SERVICE FIT — TABLET/MOBILE COMPACT CARDS
+   number badge top-right, smaller card height
+===================================================== */
+
+@media (max-width: 980px) {
+    .service-page .service-fit__grid {
+        gap: 14px !important;
+    }
+
+    .service-page .fit-card {
+        position: relative !important;
+        min-height: 0 !important;
+        padding: 22px 76px 20px 22px !important;
+        overflow: hidden !important;
+    }
+
+    .service-page .fit-card__number {
+        position: absolute !important;
+        top: 18px !important;
+        right: 18px !important;
+        display: grid !important;
+        width: 44px !important;
+        height: 44px !important;
+        place-items: center !important;
+        margin: 0 !important;
+        border-radius: 14px !important;
+        font-size: 0.82rem !important;
+    }
+
+    .service-page .fit-card__title {
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        line-height: 1.24 !important;
+    }
+
+    .service-page .fit-card__text {
+        margin-top: 10px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-page .service-fit__grid {
+        gap: 12px !important;
+    }
+
+    .service-page .fit-card {
+        padding: 20px 68px 18px 18px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-page .fit-card__number {
+        top: 16px !important;
+        right: 16px !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 13px !important;
+        font-size: 0.78rem !important;
+    }
+
+    .service-page .fit-card__title {
+        font-size: 0.98rem !important;
+    }
+
+    .service-page .fit-card__text {
+        font-size: 0.84rem !important;
+        line-height: 1.48 !important;
+    }
+}
+
+/* =====================================================
+   SERVICE FIT — HALF TOP/BOTTOM PADDING
+===================================================== */
+
+.service-page .service-fit.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-fit.section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-page .service-fit.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+}
