@@ -1,0 +1,47 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Union s.r.o. logo mark</title>
+  <desc id="logoDesc">Circular premium UN logo mark for Union s.r.o.</desc>
+
+  <rect width="120" height="120" rx="60" fill="#063F3B"/>
+
+  <circle cx="60" cy="60" r="54" fill="url(#paint0_radial)"/>
+  <circle cx="60" cy="60" r="54" fill="url(#paint1_linear)"/>
+
+  <path d="M31 31C40.5 22.5 53.5 18.5 66.4 20.5C82.3 23 95.3 34.6 100.2 49.9" stroke="#FFD15A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M89.5 89.3C79.8 98.2 66.3 102.2 53.1 99.7C37.6 96.8 25.1 85.2 20.4 70.2" stroke="#F5A11A" stroke-width="5" stroke-linecap="round"/>
+
+  <circle cx="92" cy="31" r="5.5" fill="#F5A11A"/>
+  <circle cx="26" cy="89" r="4.5" fill="#FFD15A"/>
+
+  <g filter="url(#filter0_d)">
+    <path d="M31.5 43V66.7C31.5 78.4 39 86.2 50.6 86.2C62.2 86.2 69.7 78.4 69.7 66.7V43H59.7V66.2C59.7 72.9 56.3 77 50.6 77C44.9 77 41.5 72.9 41.5 66.2V43H31.5Z" fill="white"/>
+    <path d="M76.4 85H86.2V58.7L105.5 85H113.5V43H103.7V68.5L84.9 43H76.4V85Z" fill="white"/>
+  </g>
+
+  <path d="M28 32L34 34.5L28 37L25.5 43L23 37L17 34.5L23 32L25.5 26L28 32Z" fill="#FFD15A"/>
+  <path d="M96 76L100 77.7L96 79.5L94.3 83.5L92.5 79.5L88.5 77.7L92.5 76L94.3 72L96 76Z" fill="#F7BD32"/>
+
+  <defs>
+    <filter id="filter0_d" x="23.5" y="38" width="98" height="59.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="4"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.0862745 0 0 0 0 0.0784314 0 0 0 0.28 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36 26) rotate(51.3402) scale(86.209)">
+      <stop stop-color="#0D5E57"/>
+      <stop offset="0.52" stop-color="#063F3B"/>
+      <stop offset="1" stop-color="#053633"/>
+    </radialGradient>
+
+    <linearGradient id="paint1_linear" x1="21" y1="17" x2="102" y2="103" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5A11A" stop-opacity="0.24"/>
+      <stop offset="0.42" stop-color="#063F3B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0A514B" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+</svg>

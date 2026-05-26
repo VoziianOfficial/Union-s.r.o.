@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Web Design | Union s.r.o.</title>
+    <meta name="description"
+        content="Web design direction by Union s.r.o. focused on responsive layouts, UX clarity, visual hierarchy, service pages, and conversion-ready experiences." />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+</head>
+
+<body class="service-page">
+    <noscript>Please enable JavaScript to use this website.</noscript>
+
+    <div class="site" data-service-page>
+
+        <!-- =========================
+      1. HEADER
+    ========================== -->
+        <div data-site-header></div>
+
+        <!-- =========================
+      2. SERVICE HERO
+    ========================== -->
+        <section class="service-hero-wrap" aria-label="Web Design service hero">
+            <div class="service-hero">
+                <div class="service-hero__bg" aria-hidden="true">
+                    <img src="./assets/images/service-hero-web-design.jpg" alt="" width="1440" height="860"
+                        data-service-hero-image />
+                </div>
+
+                <div class="service-hero__content">
+                    <div class="service-hero__inner">
+                        <div class="service-hero__breadcrumb" data-reveal>
+                            <a href="./index.html">Home</a>
+                            <i data-lucide="chevron-right" aria-hidden="true"></i>
+                            <a href="./index.html#services">Services</a>
+                            <i data-lucide="chevron-right" aria-hidden="true"></i>
+                            <span data-service-breadcrumb-title>Web Design</span>
+                        </div>
+
+                        <div class="service-hero__eyebrow" data-reveal>
+                            <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                            <span data-service-eyebrow>Digital experience</span>
+                        </div>
+
+                        <h1 class="service-hero__title" data-reveal data-service-title>
+                            Web Design That Turns Brand Presentation Into A Clear Digital Experience.
+                        </h1>
+
+                        <p class="service-hero__text" data-reveal data-service-text>
+                            Union s.r.o. helps shape websites that feel clear, structured, responsive,
+                            and easier for visitors to understand and act on.
+                        </p>
+
+                        <div class="service-hero__actions" data-reveal>
+                            <a class="btn btn--primary" href="./index.html#contact">
+                                <span>Start a Project</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="btn btn--dark" href="#overview">
+                                <span>View Service</span>
+                                <i data-lucide="arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-hero__badges" data-reveal>
+                            <span class="service-hero__badge">
+                                <i data-lucide="monitor-smartphone" aria-hidden="true"></i>
+                                Responsive design
+                            </span>
+
+                            <span class="service-hero__badge">
+                                <i data-lucide="mouse-pointer-click" aria-hidden="true"></i>
+                                UX clarity
+                            </span>
+
+                            <span class="service-hero__badge">
+                                <i data-lucide="target" aria-hidden="true"></i>
+                                Conversion flow
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="sparkle service-hero__sparkle--one" aria-hidden="true"></span>
+                <span class="sparkle service-hero__sparkle--two" aria-hidden="true"></span>
+                <span class="dot service-hero__dot--one" aria-hidden="true"></span>
+                <span class="dot service-hero__dot--two" aria-hidden="true"></span>
+
+                <button class="service-hero__scroll" type="button" aria-label="Scroll to overview" data-service-scroll
+                    data-target="#overview">
+                    <i data-lucide="arrow-down" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <main class="service-main">
+
+            <!-- =========================
+        3. SERVICE OVERVIEW
+      ========================== -->
+            <section class="section service-overview" id="overview">
+                <div class="container">
+                    <div class="service-overview__grid">
+                        <div class="service-overview__media" data-reveal>
+                            <img src="./assets/images/service-overview-web-design.jpg"
+                                alt="Web design planning with responsive layouts, wireframes, and digital interface screens"
+                                width="900" height="980" data-service-overview-image />
+
+                            <div class="service-overview__floating">
+                                <span class="service-overview__floating-icon" aria-hidden="true">
+                                    <i data-lucide="layout-dashboard"></i>
+                                </span>
+
+                                <span>
+                                    <strong data-service-floating-title>Web Design direction</strong>
+                                    <span data-service-floating-text>
+                                        A clearer way to connect layout, message, trust, responsive flow, and user
+                                        action.
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="service-overview__content">
+                            <p class="section-kicker" data-reveal>Service overview</p>
+
+                            <h2 class="section-title" data-reveal data-service-overview-title>
+                                Web Design shaped around clarity, structure, and practical digital experience.
+                            </h2>
+
+                            <p class="section-text" data-reveal data-service-overview-text>
+                                Responsive website design direction focused on hierarchy, clarity, user flow,
+                                trust, and conversion-ready pages.
+                            </p>
+
+                            <div class="service-overview__metrics" data-service-metrics>
+                                <article class="service-metric" data-reveal>
+                                    <strong>UX clarity</strong>
+                                    <span>Visitors should understand the page purpose and next step quickly.</span>
+                                </article>
+
+                                <article class="service-metric" data-reveal>
+                                    <strong>Responsive flow</strong>
+                                    <span>Layouts need to feel clean on desktop, tablet, and mobile screens.</span>
+                                </article>
+
+                                <article class="service-metric" data-reveal>
+                                    <strong>Visual hierarchy</strong>
+                                    <span>Design choices guide attention instead of creating noise.</span>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        4. BEST FOR / WHO IT FITS
+      ========================== -->
+            <section class="section service-fit">
+                <div class="container">
+                    <div class="section-head section-head--center">
+                        <p class="section-kicker" data-reveal>Best for</p>
+
+                        <h2 class="section-title section-title--center" data-reveal>
+                            Web design support for businesses that need a clearer digital experience.
+                        </h2>
+
+                        <p class="section-text section-text--center" data-reveal>
+                            A website should not only look polished. It should make the service easier
+                            to understand, compare, trust, and act on.
+                        </p>
+                    </div>
+
+                    <div class="service-fit__grid" data-service-fit-list>
+                        <article class="corner-card fit-card" data-reveal>
+                            <span class="fit-card__number">01</span>
+                            <h3 class="fit-card__title">Businesses that need a clearer website experience.</h3>
+                            <p class="fit-card__text">
+                                This focus helps create a more organized digital path before design decisions become
+                                scattered.
+                            </p>
+                        </article>
+
+                        <article class="corner-card fit-card" data-reveal>
+                            <span class="fit-card__number">02</span>
+                            <h3 class="fit-card__title">Service brands that want stronger landing pages.</h3>
+                            <p class="fit-card__text">
+                                Landing pages need visual clarity, trust signals, strong hierarchy, and clear calls to
+                                action.
+                            </p>
+                        </article>
+
+                        <article class="corner-card fit-card" data-reveal>
+                            <span class="fit-card__number">03</span>
+                            <h3 class="fit-card__title">Teams that need better structure before sending traffic.</h3>
+                            <p class="fit-card__text">
+                                Paid ads, SEO, and social media work better when visitors land on a page that feels
+                                clear.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        5. WHAT UNION DOES
+      ========================== -->
+            <section class="section service-does">
+                <div class="container">
+                    <div class="service-does__grid">
+                        <div class="service-does__sticky">
+                            <p class="section-kicker" data-reveal>What Union does</p>
+
+                            <h2 class="section-title" data-reveal>
+                                Clearer page structure before visual design becomes decoration.
+                            </h2>
+
+                            <p class="section-text" data-reveal>
+                                Union s.r.o. reviews website structure, responsive layout, user flow,
+                                visual hierarchy, CTA placement, and trust signals so the design supports action.
+                            </p>
+                        </div>
+
+                        <div class="service-does__list" data-service-does-list>
+                            <article class="does-item" data-reveal>
+                                <span class="does-item__icon" aria-hidden="true">
+                                    <i data-lucide="layout-dashboard"></i>
+                                </span>
+                                <div>
+                                    <h3 class="does-item__title">Website structure and page hierarchy.</h3>
+                                    <p class="does-item__text">
+                                        Union s.r.o. reviews how sections are ordered, how attention flows,
+                                        and how visitors understand the page.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="does-item" data-reveal>
+                                <span class="does-item__icon" aria-hidden="true">
+                                    <i data-lucide="monitor-smartphone"></i>
+                                </span>
+                                <div>
+                                    <h3 class="does-item__title">Responsive layout direction.</h3>
+                                    <p class="does-item__text">
+                                        Desktop, tablet, and mobile layouts are considered so the experience stays
+                                        balanced.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="does-item" data-reveal>
+                                <span class="does-item__icon" aria-hidden="true">
+                                    <i data-lucide="mouse-pointer-click"></i>
+                                </span>
+                                <div>
+                                    <h3 class="does-item__title">CTA and trust signal placement.</h3>
+                                    <p class="does-item__text">
+                                        Calls to action and confidence-building details are placed where they support
+                                        decisions.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        6. STRATEGY LAYER
+      ========================== -->
+            <section class="section service-strategy">
+                <div class="container">
+                    <div class="dark-panel service-strategy__panel">
+                        <div class="service-strategy__grid">
+                            <div>
+                                <div class="service-strategy__label" data-reveal>
+                                    <i data-lucide="sparkles" aria-hidden="true"></i>
+                                    Strategy layer
+                                </div>
+
+                                <h2 class="service-strategy__title" data-reveal>
+                                    Website design is stronger when layout, copy, and conversion flow work together.
+                                </h2>
+
+                                <p class="service-strategy__text" data-reveal data-service-strategy-text>
+                                    A website should make the business easier to understand. Design, copy,
+                                    hierarchy, and conversion paths need to work together.
+                                </p>
+                            </div>
+
+                            <div class="service-strategy__cards" data-service-strategy-cards>
+                                <article class="strategy-card" data-reveal>
+                                    <span class="strategy-card__icon" aria-hidden="true">
+                                        <i data-lucide="sparkles"></i>
+                                    </span>
+                                    <span>
+                                        <strong>Clearer priority setting</strong>
+                                        <span>The most important page improvements are separated from purely decorative
+                                            ideas.</span>
+                                    </span>
+                                </article>
+
+                                <article class="strategy-card" data-reveal>
+                                    <span class="strategy-card__icon" aria-hidden="true">
+                                        <i data-lucide="workflow"></i>
+                                    </span>
+                                    <span>
+                                        <strong>Connected page thinking</strong>
+                                        <span>Design is reviewed as part of a wider marketing and conversion
+                                            system.</span>
+                                    </span>
+                                </article>
+
+                                <article class="strategy-card" data-reveal>
+                                    <span class="strategy-card__icon" aria-hidden="true">
+                                        <i data-lucide="mouse-pointer-click"></i>
+                                    </span>
+                                    <span>
+                                        <strong>Conversion-aware decisions</strong>
+                                        <span>Page clarity, CTAs, forms, trust signals, and mobile flow are
+                                            included.</span>
+                                    </span>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        7. DELIVERABLES
+      ========================== -->
+            <section class="section service-deliverables">
+                <div class="container">
+                    <div class="section-head section-head--center">
+                        <p class="section-kicker" data-reveal>Deliverables</p>
+
+                        <h2 class="section-title section-title--center" data-reveal>
+                            Practical web design outputs shaped for clearer digital presentation.
+                        </h2>
+                    </div>
+
+                    <div class="service-deliverables__grid" data-service-deliverables>
+                        <article class="deliverable-card" data-reveal>
+                            <span class="deliverable-card__icon" aria-hidden="true">
+                                <i data-lucide="layout-dashboard"></i>
+                            </span>
+                            <h3 class="deliverable-card__title">Website structure direction</h3>
+                            <p class="deliverable-card__text">
+                                A practical output designed to make the website easier to understand and improve.
+                            </p>
+                        </article>
+
+                        <article class="deliverable-card" data-reveal>
+                            <span class="deliverable-card__icon" aria-hidden="true">
+                                <i data-lucide="monitor-smartphone"></i>
+                            </span>
+                            <h3 class="deliverable-card__title">Responsive design priorities</h3>
+                            <p class="deliverable-card__text">
+                                Layout choices are shaped for desktop, tablet, and mobile readability.
+                            </p>
+                        </article>
+
+                        <article class="deliverable-card" data-reveal>
+                            <span class="deliverable-card__icon" aria-hidden="true">
+                                <i data-lucide="target"></i>
+                            </span>
+                            <h3 class="deliverable-card__title">CTA placement guidance</h3>
+                            <p class="deliverable-card__text">
+                                Calls to action are reviewed for clarity, placement, and user confidence.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        8. METHOD / PROCESS
+      ========================== -->
+            <section class="section service-method">
+                <div class="container">
+                    <div class="service-method__grid">
+                        <div class="service-method__visual" data-reveal>
+                            <div class="service-method__circle">
+                                <img src="./assets/images/home-process.jpg"
+                                    alt="Web design process planning with page structure and interface layout notes"
+                                    width="720" height="720" />
+                            </div>
+
+                            <div class="service-method__note">
+                                <i data-lucide="activity" aria-hidden="true"></i>
+                                <span>Better design decisions before layouts become cluttered.</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="section-kicker" data-reveal>Method</p>
+
+                            <h2 class="section-title" data-reveal>
+                                A simple path from scattered layouts to clearer digital experience.
+                            </h2>
+
+                            <div class="service-method__steps" data-service-method-steps>
+                                <article class="method-step" data-reveal>
+                                    <span class="method-step__number">01</span>
+                                    <div>
+                                        <h3 class="method-step__title">Review the current situation</h3>
+                                        <p class="method-step__text">
+                                            Union s.r.o. looks at page structure, content flow, responsive behavior,
+                                            visual hierarchy, and user action points.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <article class="method-step" data-reveal>
+                                    <span class="method-step__number">02</span>
+                                    <div>
+                                        <h3 class="method-step__title">Define the clearer direction</h3>
+                                        <p class="method-step__text">
+                                            Priorities are organized into a practical layout structure with stronger UX
+                                            logic.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <article class="method-step" data-reveal>
+                                    <span class="method-step__number">03</span>
+                                    <div>
+                                        <h3 class="method-step__title">Shape the execution plan</h3>
+                                        <p class="method-step__text">
+                                            Recommendations focus on sections, CTAs, trust details, mobile flow,
+                                            and visual hierarchy.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        9. FAQ
+      ========================== -->
+            <section class="section service-faq">
+                <div class="container">
+                    <div class="service-faq__grid">
+                        <div class="service-faq__sticky">
+                            <p class="section-kicker" data-reveal>Questions</p>
+
+                            <h2 class="section-title" data-reveal>
+                                Useful answers about Web Design with Union s.r.o.
+                            </h2>
+
+                            <p class="section-text" data-reveal>
+                                Strong web design depends on structure, content clarity, responsive behavior,
+                                page hierarchy, visual style, trust signals, and user action.
+                            </p>
+                        </div>
+
+                        <div class="faq-list" data-service-faq-list>
+                            <article class="faq-item" data-faq-item data-reveal>
+                                <button class="faq-question" type="button" aria-expanded="true"
+                                    aria-controls="service-faq-answer-1" data-faq-question>
+                                    <span>Is web design only visual?</span>
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="faq-answer is-open" id="service-faq-answer-1" data-faq-answer>
+                                    <div class="faq-answer__inner">
+                                        <p class="faq-answer__text">
+                                            No. Strong web design also includes structure, user flow, content hierarchy,
+                                            responsive behavior, and conversion clarity.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        10. RELATED SERVICES / CTA
+      ========================== -->
+            <section class="section service-related">
+                <div class="container">
+                    <div class="dark-panel service-related__panel">
+                        <div class="service-related__head">
+                            <div>
+                                <p class="section-kicker" data-reveal>Related services</p>
+
+                                <h2 class="section-title section-title--light" data-reveal>
+                                    Connect web design with SEO, Google Ads, and conversion-focused improvements.
+                                </h2>
+
+                                <p class="section-text section-text--light" data-reveal>
+                                    Website design is stronger when organic visibility, paid traffic,
+                                    and conversion clarity support the same page experience.
+                                </p>
+                            </div>
+
+                            <a class="btn btn--primary" href="./index.html#contact" data-reveal>
+                                <span>Start a Project</span>
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-related__grid" data-related-services>
+                            <article class="related-card" data-reveal>
+                                <span class="related-card__icon" aria-hidden="true">
+                                    <i data-lucide="target"></i>
+                                </span>
+
+                                <h3 class="related-card__title">Conversion Boost</h3>
+
+                                <p class="related-card__text">
+                                    Conversion-focused improvements for CTAs, forms, trust signals, page flow, and
+                                    friction reduction.
+                                </p>
+
+                                <a class="text-link related-card__link" href="./conversion-boost.html">
+                                    <span>Explore service</span>
+                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- =========================
+      11. FOOTER
+    ========================== -->
+        <div data-site-footer></div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/services.js"></script>
+</body>
+
+</html>

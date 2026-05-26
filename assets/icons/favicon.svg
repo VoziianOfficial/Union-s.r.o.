@@ -1,0 +1,37 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">Union favicon</title>
+
+  <rect width="64" height="64" rx="18" fill="#063F3B"/>
+
+  <circle cx="32" cy="32" r="27" fill="url(#faviconGradient)"/>
+
+  <path d="M17 20C22.2 15.7 29.1 13.8 35.7 14.9C43.7 16.2 50.2 21.9 53 29.3"
+    stroke="#FFD15A"
+    stroke-width="3.2"
+    stroke-linecap="round"/>
+
+  <path d="M47 46C41.8 50.4 34.7 52.2 28 51C20.1 49.5 13.8 43.8 11.1 36.5"
+    stroke="#F5A11A"
+    stroke-width="3.2"
+    stroke-linecap="round"/>
+
+  <path d="M18 22.5V35.2C18 41.5 22.1 45.7 28.4 45.7C34.7 45.7 38.8 41.5 38.8 35.2V22.5H33.4V34.9C33.4 38.5 31.6 40.7 28.4 40.7C25.3 40.7 23.5 38.5 23.5 34.9V22.5H18Z"
+    fill="white"/>
+
+  <path d="M42.2 45H47.4V31L57.6 45H61.5V22.5H56.3V36.1L46.4 22.5H42.2V45Z"
+    fill="white"/>
+
+  <circle cx="50" cy="17" r="3" fill="#F5A11A"/>
+  <circle cx="14" cy="49" r="2.7" fill="#FFD15A"/>
+
+  <path d="M13 16.5L16.2 17.9L13 19.3L11.6 22.5L10.2 19.3L7 17.9L10.2 16.5L11.6 13.3L13 16.5Z"
+    fill="#FFD15A"/>
+
+  <defs>
+    <linearGradient id="faviconGradient" x1="13" y1="11" x2="52" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D5E57"/>
+      <stop offset="0.52" stop-color="#063F3B"/>
+      <stop offset="1" stop-color="#053633"/>
+    </linearGradient>
+  </defs>
+</svg>
