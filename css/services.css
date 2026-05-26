@@ -1492,3 +1492,182 @@
         padding-top: 78px !important;
     }
 }
+
+/* =====================================================
+   SERVICE OVERVIEW METRICS — PREMIUM HOVERS
+===================================================== */
+
+.service-page .service-overview__metrics .service-metric {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    cursor: default;
+    transform: translateY(0);
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease,
+        background 280ms ease,
+        box-shadow 280ms ease;
+}
+
+/* верхняя акцентная линия */
+.service-page .service-overview__metrics .service-metric::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: 0;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--color-accent-orange),
+            var(--color-accent-gold),
+            transparent);
+    opacity: 0;
+    transform: scaleX(0.35);
+    transform-origin: center;
+    transition:
+        opacity 280ms ease,
+        transform 320ms ease;
+}
+
+/* мягкое свечение внутри карточки */
+.service-page .service-overview__metrics .service-metric::before {
+    content: "";
+    position: absolute;
+    right: -34px;
+    bottom: -34px;
+    z-index: -1;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(245, 161, 26, 0.12);
+    opacity: 0;
+    transform: scale(0.75);
+    transition:
+        opacity 280ms ease,
+        transform 320ms ease;
+}
+
+.service-page .service-overview__metrics .service-metric:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 161, 26, 0.38);
+    background:
+        radial-gradient(circle at 88% 100%, rgba(245, 161, 26, 0.08), transparent 10rem),
+        var(--color-bg-white);
+    box-shadow:
+        0 22px 50px rgba(8, 60, 57, 0.13),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.service-page .service-overview__metrics .service-metric:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.service-page .service-overview__metrics .service-metric:hover::before {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.service-page .service-overview__metrics .service-metric strong {
+    transition:
+        color 260ms ease,
+        transform 260ms ease;
+}
+
+.service-page .service-overview__metrics .service-metric span {
+    transition: color 260ms ease;
+}
+
+.service-page .service-overview__metrics .service-metric:hover strong {
+    color: var(--color-accent-orange-hover);
+    transform: translateY(-1px);
+}
+
+.service-page .service-overview__metrics .service-metric:hover span {
+    color: var(--color-text-dark);
+}
+
+/* чуть разный glow для каждой карточки */
+.service-page .service-overview__metrics .service-metric:nth-child(2)::before {
+    background: rgba(11, 106, 97, 0.11);
+}
+
+.service-page .service-overview__metrics .service-metric:nth-child(3)::before {
+    background: rgba(255, 209, 90, 0.14);
+}
+
+/* mobile: hover мягче, чтобы карточки не прыгали */
+@media (max-width: 720px) {
+    .service-page .service-overview__metrics .service-metric {
+        min-height: auto !important;
+    }
+
+    .service-page .service-overview__metrics .service-metric:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* =====================================================
+   SERVICE OVERVIEW FLOATING ICON — TRUE CENTER FIX
+===================================================== */
+
+.service-page .service-overview__floating-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+.service-page .service-overview__floating-icon i,
+.service-page .service-overview__floating-icon svg {
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    line-height: 1 !important;
+}
+
+/* mobile size */
+@media (max-width: 720px) {
+    .service-page .service-overview__floating-icon {
+        flex-basis: 42px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .service-page .service-overview__floating-icon i,
+    .service-page .service-overview__floating-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* =====================================================
+   SERVICE OVERVIEW — HALF BOTTOM PADDING ONLY
+===================================================== */
+
+.service-page .service-overview.section {
+    padding-bottom: 48px !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-overview.section {
+        padding-bottom: 38px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-page .service-overview.section {
+        padding-bottom: 32px !important;
+    }
+}
