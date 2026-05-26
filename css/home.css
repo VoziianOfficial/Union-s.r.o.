@@ -2036,3 +2036,71 @@
     color: rgba(255, 255, 255, 0.62) !important;
 }
 
+/* =====================================================
+   FINAL FIXED HEADER
+   header stays on top, hero styles are not changed
+===================================================== */
+
+.home-page .site>[data-site-header] {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/* header inside wrapper */
+.home-page .site>[data-site-header] .site-header,
+.home-page .site>[data-site-header] .site-header--hero {
+    position: relative !important;
+    top: auto !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* чтобы hero не заехал под fixed header */
+.home-page .ref-hero-wrap {
+    padding-top: 104px !important;
+}
+
+/* если JS вдруг заменит wrapper на сам header */
+.home-page .site>.site-header,
+.home-page .site>.site-header--hero {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+@media (max-width: 980px) {
+
+    .home-page .site>[data-site-header],
+    .home-page .site>.site-header,
+    .home-page .site>.site-header--hero {
+        top: 10px !important;
+        width: min(100% - 28px, var(--container)) !important;
+    }
+
+    .home-page .ref-hero-wrap {
+        padding-top: 88px !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .home-page .site>[data-site-header],
+    .home-page .site>.site-header,
+    .home-page .site>.site-header--hero {
+        width: min(100% - 20px, var(--container)) !important;
+    }
+
+    .home-page .ref-hero-wrap {
+        padding-top: 78px !important;
+    }
+}
