@@ -1,6 +1,4 @@
-/* ==============================
-   LEGAL PAGES
-============================== */
+
 
 .legal-page {
     background: var(--color-bg-light);
@@ -11,9 +9,7 @@
     background: var(--color-bg-white);
 }
 
-/* ==============================
-   LEGAL HERO
-============================== */
+
 
 .legal-hero-wrap {
     position: relative;
@@ -218,9 +214,7 @@
     height: 6px;
 }
 
-/* ==============================
-   LEGAL LAYOUT
-============================== */
+
 
 .legal-content {
     padding-top: 84px;
@@ -338,9 +332,7 @@
     color: var(--color-bg-dark);
 }
 
-/* ==============================
-   LEGAL ARTICLE
-============================== */
+
 
 .legal-article {
     position: relative;
@@ -550,9 +542,7 @@
     line-height: 1.56;
 }
 
-/* ==============================
-   LEGAL CTA
-============================== */
+
 
 .legal-cta {
     background: var(--color-bg-white);
@@ -587,9 +577,7 @@
     line-height: 1.68;
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
+
 
 @media (max-width: 980px) {
     .legal-hero-wrap {
@@ -773,10 +761,7 @@
     }
 }
 
-/* =====================================================
-   LEGAL HERO — DARK OUTER FIX
-   убираем белое и делаем нормальный низ
-===================================================== */
+
 
 .legal-page .legal-hero-wrap {
     position: relative;
@@ -792,14 +777,14 @@
             #042d2a 100%) !important;
 }
 
-/* убираем белый низ / волну, если она есть */
+
 .legal-page .legal-hero::before,
 .legal-page .legal-hero::after {
     display: none !important;
     content: none !important;
 }
 
-/* сама hero-card как на главной */
+
 .legal-page .legal-hero {
     position: relative;
     z-index: 1;
@@ -819,7 +804,7 @@
         inset 0 -18px 34px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* мягкая тень под блоком */
+
 .legal-page .legal-hero-wrap::after {
     content: "";
     position: absolute;
@@ -835,12 +820,12 @@
     pointer-events: none;
 }
 
-/* чтобы внутри не было лишнего белого снизу */
+
 .legal-page .legal-hero__content {
     padding-bottom: clamp(56px, 7vw, 92px) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .legal-page .legal-hero-wrap {
         padding-top: 88px !important;
@@ -862,7 +847,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .legal-page .legal-hero-wrap {
         padding-top: 78px !important;
@@ -884,10 +869,7 @@
     }
 }
 
-/* =====================================================
-   LEGAL HERO — EXTRA COMPACT HEIGHT
-   lower hero height on legal pages
-===================================================== */
+
 
 .legal-page .legal-hero {
     min-height: 340px !important;
@@ -924,7 +906,7 @@
     margin-top: 22px !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .legal-page .legal-hero {
         min-height: 310px !important;
@@ -945,7 +927,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .legal-page .legal-hero {
         min-height: 290px !important;
@@ -974,7 +956,7 @@
     }
 }
 
-/* very small mobile */
+
 @media (max-width: 460px) {
     .legal-page .legal-hero {
         min-height: 270px !important;
@@ -987,9 +969,7 @@
     }
 }
 
-/* =====================================================
-   LEGAL NOTE ICON — TRUE CENTER FIX
-===================================================== */
+
 
 .legal-page .legal-note__icon {
     display: flex !important;
@@ -1033,10 +1013,7 @@
     }
 }
 
-/* =====================================================
-   LEGAL PAGES — FIXED HEADER
-   same sticky header behavior as home/service pages
-===================================================== */
+
 
 .legal-page .site>[data-site-header] {
     position: fixed !important;
@@ -1048,7 +1025,7 @@
     transform: translateX(-50%) !important;
 }
 
-/* header inside injected wrapper */
+
 .legal-page .site>[data-site-header] .site-header,
 .legal-page .site>[data-site-header] .site-header--hero {
     position: relative !important;
@@ -1058,7 +1035,7 @@
     margin: 0 !important;
 }
 
-/* если JS вставит header напрямую без wrapper */
+
 .legal-page .site>.site-header,
 .legal-page .site>.site-header--hero {
     position: fixed !important;
@@ -1070,7 +1047,7 @@
     transform: translateX(-50%) !important;
 }
 
-/* чтобы legal hero не залезал под fixed header */
+
 .legal-page .legal-hero-wrap {
     padding-top: 104px !important;
 }

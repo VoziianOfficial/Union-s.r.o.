@@ -1,6 +1,4 @@
-/* ==============================
-   SERVICE PAGES
-============================== */
+
 
 .service-page {
     background: var(--color-bg-light);
@@ -11,9 +9,7 @@
     background: var(--color-bg-white);
 }
 
-/* ==============================
-   SERVICE HERO
-============================== */
+
 
 .service-hero-wrap {
     position: relative;
@@ -273,9 +269,7 @@
     height: 6px;
 }
 
-/* ==============================
-   SERVICE INTRO / OVERVIEW
-============================== */
+
 
 .service-overview {
     padding-top: 86px;
@@ -419,9 +413,7 @@
     line-height: 1.45;
 }
 
-/* ==============================
-   BEST FOR
-============================== */
+
 
 .service-fit {
     background:
@@ -469,9 +461,7 @@
     line-height: 1.62;
 }
 
-/* ==============================
-   WHAT UNION DOES
-============================== */
+
 
 .service-does {
     background: var(--color-bg-soft);
@@ -547,9 +537,7 @@
     line-height: 1.58;
 }
 
-/* ==============================
-   STRATEGY LAYER
-============================== */
+
 
 .service-strategy {
     background: var(--color-bg-white);
@@ -655,9 +643,7 @@
     line-height: 1.5;
 }
 
-/* ==============================
-   DELIVERABLES
-============================== */
+
 
 .service-deliverables {
     background: var(--color-bg-white);
@@ -741,9 +727,7 @@
     line-height: 1.5;
 }
 
-/* ==============================
-   METHOD / PROCESS
-============================== */
+
 
 .service-method {
     background:
@@ -869,9 +853,7 @@
     line-height: 1.6;
 }
 
-/* ==============================
-   SERVICE FAQ
-============================== */
+
 
 .service-faq {
     background: var(--color-bg-soft);
@@ -889,9 +871,7 @@
     top: 116px;
 }
 
-/* ==============================
-   RELATED SERVICES / CTA
-============================== */
+
 
 .service-related {
     background: var(--color-bg-white);
@@ -986,9 +966,7 @@
     color: var(--color-accent-orange);
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
+
 
 @media (max-width: 1120px) {
     .service-hero {
@@ -1321,10 +1299,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE HERO — SAME OUTER STYLE AS HOME HERO
-   убираем белые боковые зоны и белый низ
-===================================================== */
+
 
 .service-page .service-hero-wrap {
     position: relative;
@@ -1340,14 +1315,14 @@
             #042d2a 100%) !important;
 }
 
-/* убираем белую волну/белый низ */
+
 .service-page .service-hero::before,
 .service-page .service-hero::after {
     display: none !important;
     content: none !important;
 }
 
-/* border + объем как на главной hero */
+
 .service-page .service-hero {
     position: relative;
     z-index: 1;
@@ -1362,7 +1337,7 @@
         inset 0 -18px 34px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* мягкая тень снизу под hero */
+
 .service-page .service-hero-wrap::after {
     content: "";
     position: absolute;
@@ -1378,13 +1353,13 @@
     pointer-events: none;
 }
 
-/* чтобы фон-картинка внутри не вылезала за новые бордеры */
+
 .service-page .service-hero__bg {
     border-radius: inherit;
     overflow: hidden;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-page .service-hero-wrap {
         padding-top: 88px !important;
@@ -1406,7 +1381,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-page .service-hero-wrap {
         padding-top: 78px !important;
@@ -1424,10 +1399,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE PAGES — FIXED HEADER
-   same behavior as home page header
-===================================================== */
+
 
 .service-page .site>[data-site-header] {
     position: fixed !important;
@@ -1439,7 +1411,7 @@
     transform: translateX(-50%) !important;
 }
 
-/* header inside wrapper */
+
 .service-page .site>[data-site-header] .site-header,
 .service-page .site>[data-site-header] .site-header--hero {
     position: relative !important;
@@ -1449,7 +1421,7 @@
     margin: 0 !important;
 }
 
-/* если JS вдруг заменит wrapper на сам header */
+
 .service-page .site>.site-header,
 .service-page .site>.site-header--hero {
     position: fixed !important;
@@ -1461,7 +1433,7 @@
     transform: translateX(-50%) !important;
 }
 
-/* чтобы service hero не заезжал под fixed header */
+
 .service-page .service-hero-wrap {
     padding-top: 104px !important;
 }
@@ -1493,9 +1465,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE OVERVIEW METRICS — PREMIUM HOVERS
-===================================================== */
+
 
 .service-page .service-overview__metrics .service-metric {
     position: relative;
@@ -1510,7 +1480,7 @@
         box-shadow 280ms ease;
 }
 
-/* верхняя акцентная линия */
+
 .service-page .service-overview__metrics .service-metric::after {
     content: "";
     position: absolute;
@@ -1532,7 +1502,7 @@
         transform 320ms ease;
 }
 
-/* мягкое свечение внутри карточки */
+
 .service-page .service-overview__metrics .service-metric::before {
     content: "";
     position: absolute;
@@ -1590,7 +1560,7 @@
     color: var(--color-text-dark);
 }
 
-/* чуть разный glow для каждой карточки */
+
 .service-page .service-overview__metrics .service-metric:nth-child(2)::before {
     background: rgba(11, 106, 97, 0.11);
 }
@@ -1599,7 +1569,7 @@
     background: rgba(255, 209, 90, 0.14);
 }
 
-/* mobile: hover мягче, чтобы карточки не прыгали */
+
 @media (max-width: 720px) {
     .service-page .service-overview__metrics .service-metric {
         min-height: auto !important;
@@ -1610,9 +1580,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE OVERVIEW FLOATING ICON — TRUE CENTER FIX
-===================================================== */
+
 
 .service-page .service-overview__floating-icon {
     display: flex !important;
@@ -1637,7 +1605,7 @@
     line-height: 1 !important;
 }
 
-/* mobile size */
+
 @media (max-width: 720px) {
     .service-page .service-overview__floating-icon {
         flex-basis: 42px !important;
@@ -1652,9 +1620,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE OVERVIEW — HALF BOTTOM PADDING ONLY
-===================================================== */
+
 
 .service-page .service-overview.section {
     padding-bottom: 48px !important;
@@ -1672,10 +1638,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE FIT — TABLET/MOBILE COMPACT CARDS
-   number badge top-right, smaller card height
-===================================================== */
+
 
 @media (max-width: 980px) {
     .service-page .service-fit__grid {
@@ -1744,9 +1707,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE FIT — HALF TOP/BOTTOM PADDING
-===================================================== */
+
 
 .service-page .service-fit.section {
     padding-top: 48px !important;
@@ -1767,10 +1728,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE DOES — CLEAN EDITORIAL RAIL
-   compact, light, horizontal, no cards inside cards
-===================================================== */
+
 
 .service-page .service-does--clean {
     background:
@@ -1783,7 +1741,7 @@
     padding-bottom: 48px !important;
 }
 
-/* общая сетка — спокойная, без sticky-хаоса */
+
 .service-page .service-does--clean .service-does__grid {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -1791,14 +1749,14 @@
     align-items: center;
 }
 
-/* убираем sticky, чтобы секция была компактной */
+
 .service-page .service-does--clean .service-does__sticky {
     position: relative !important;
     top: auto !important;
     max-width: 560px;
 }
 
-/* правая часть — не карточки, а editorial-list */
+
 .service-page .service-does--clean .service-does__list {
     display: grid;
     gap: 0 !important;
@@ -1806,7 +1764,7 @@
     border-bottom: 1px solid rgba(6, 63, 59, 0.14);
 }
 
-/* каждый пункт — строка, НЕ карточка */
+
 .service-page .service-does--clean .does-item {
     position: relative;
     display: grid;
@@ -1830,7 +1788,7 @@
     border-top: 1px solid rgba(6, 63, 59, 0.14) !important;
 }
 
-/* тонкая hover-линия слева */
+
 .service-page .service-does--clean .does-item::before {
     content: "";
     position: absolute;
@@ -1847,7 +1805,7 @@
         transform 320ms ease;
 }
 
-/* иконка без тяжелой подложки */
+
 .service-page .service-does--clean .does-item__icon {
     display: grid !important;
     width: 44px !important;
@@ -1872,7 +1830,7 @@
     stroke-width: 2.35 !important;
 }
 
-/* текст */
+
 .service-page .service-does--clean .does-item__title {
     color: var(--color-text-dark);
     font-size: 1.05rem;
@@ -1892,7 +1850,7 @@
     transition: color 260ms ease;
 }
 
-/* hover — дорогой, но без карточек */
+
 .service-page .service-does--clean .does-item:hover {
     transform: translateX(8px);
     background: linear-gradient(90deg,
@@ -1918,7 +1876,7 @@
     color: var(--color-text-dark);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-page .service-does--clean.section {
         padding-top: 38px !important;
@@ -1941,7 +1899,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-page .service-does--clean.section {
         padding-top: 32px !important;
@@ -1993,10 +1951,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE DOES — TABLET LIST REWORK
-   one shared horizontal panel, not separate cards
-===================================================== */
+
 
 @media (min-width: 721px) and (max-width: 980px) {
     .service-page .service-does--clean .service-does__list {
@@ -2112,10 +2067,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE STRATEGY — COMPACT HORIZONTAL VERSION
-   for all service pages
-===================================================== */
+
 
 .service-page .service-strategy--compact {
     background: var(--color-bg-white);
@@ -2143,7 +2095,7 @@
         inset 0 -14px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* main horizontal layout */
+
 .service-page .service-strategy--compact .service-strategy__grid {
     display: grid !important;
     grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) !important;
@@ -2151,7 +2103,7 @@
     align-items: center !important;
 }
 
-/* left side */
+
 .service-page .service-strategy--compact .service-strategy__label {
     width: fit-content;
     min-height: 34px !important;
@@ -2182,7 +2134,7 @@
     line-height: 1.58 !important;
 }
 
-/* right side: 3 compact columns, not big cards */
+
 .service-page .service-strategy--compact .service-strategy__cards {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -2209,7 +2161,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.14) !important;
 }
 
-/* icon top-right */
+
 .service-page .service-strategy--compact .strategy-card__icon {
     position: absolute !important;
     top: 2px !important;
@@ -2234,7 +2186,7 @@
     stroke-width: 2.35 !important;
 }
 
-/* text */
+
 .service-page .service-strategy--compact .strategy-card>span:not(.strategy-card__icon) {
     display: block !important;
     padding-right: 42px;
@@ -2258,7 +2210,7 @@
     line-height: 1.45 !important;
 }
 
-/* hover */
+
 .service-page .service-strategy--compact .strategy-card::after {
     content: "";
     position: absolute;
@@ -2292,7 +2244,7 @@
     transform: rotate(-6deg) scale(1.05);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-page .service-strategy--compact.section {
         padding-top: 32px !important;
@@ -2316,7 +2268,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-page .service-strategy--compact.section {
         padding-top: 28px !important;
@@ -2364,17 +2316,15 @@
     }
 }
 
-/* =====================================================
-   SERVICE STRATEGY — ICON CENTER + HALF TOP PADDING
-===================================================== */
 
-/* убираем верхний padding секции примерно в половину */
+
+
 .service-page .service-strategy.section,
 .service-page .service-strategy--compact.section {
     padding-top: 24px !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
 
     .service-page .service-strategy.section,
@@ -2383,7 +2333,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
 
     .service-page .service-strategy.section,
@@ -2392,7 +2342,7 @@
     }
 }
 
-/* ровное центрирование иконки внутри каждой strategy-card__icon */
+
 .service-page .strategy-card__icon {
     display: flex !important;
     align-items: center !important;
@@ -2403,7 +2353,7 @@
     text-align: center !important;
 }
 
-/* фикс для lucide svg / i */
+
 .service-page .strategy-card__icon i,
 .service-page .strategy-card__icon svg {
     display: block !important;
@@ -2413,10 +2363,7 @@
     transform-origin: center center !important;
 }
 
-/* =====================================================
-   SERVICE DELIVERABLES — CANVAS VERSION
-   no cards, no list, no numbers
-===================================================== */
+
 
 .service-page .service-deliverables--canvas {
     overflow: hidden;
@@ -2459,7 +2406,7 @@
     line-height: 1.68;
 }
 
-/* visual canvas */
+
 .service-page .deliverables-canvas__visual {
     position: relative;
     isolation: isolate;
@@ -2500,7 +2447,7 @@
     pointer-events: none;
 }
 
-/* main statement */
+
 .service-page .deliverables-canvas__statement {
     position: relative;
     z-index: 2;
@@ -2525,7 +2472,7 @@
     letter-spacing: -0.06em;
 }
 
-/* decorative flow line */
+
 .service-page .deliverables-canvas__flow {
     position: relative;
     z-index: 1;
@@ -2576,7 +2523,7 @@
     right: 8%;
 }
 
-/* outputs as integrated phrase chips, not cards */
+
 .service-page .deliverables-canvas__outputs {
     position: relative;
     z-index: 2;
@@ -2621,7 +2568,7 @@
     background: rgba(245, 161, 26, 0.14);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-page .service-deliverables--canvas.section {
         padding-top: 38px !important;
@@ -2652,7 +2599,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-page .service-deliverables--canvas.section {
         padding-top: 32px !important;
@@ -2714,15 +2661,13 @@
     }
 }
 
-/* =====================================================
-   DELIVERABLES CANVAS — MOVING FLOW LINE
-===================================================== */
+
 
 .service-page .deliverables-canvas__flow {
     overflow: hidden;
 }
 
-/* базовая линия становится живой */
+
 .service-page .deliverables-canvas__flow::before {
     height: 2px !important;
     background: linear-gradient(90deg,
@@ -2737,7 +2682,7 @@
     animation: deliverablesFlowLine 4.2s linear infinite;
 }
 
-/* световой блик, который проходит поверх линии */
+
 .service-page .deliverables-canvas__flow::after {
     content: "";
     position: absolute;
@@ -2756,7 +2701,7 @@
     animation: deliverablesFlowGlow 3.2s ease-in-out infinite;
 }
 
-/* точки тоже чуть двигаются/дышат */
+
 .service-page .deliverables-canvas__flow span {
     animation: deliverablesFlowPulse 2.4s ease-in-out infinite;
 }
@@ -2817,7 +2762,7 @@
     }
 }
 
-/* на мобилке анимация мягче */
+
 @media (max-width: 720px) {
     .service-page .deliverables-canvas__flow::after {
         height: 1.5px;
@@ -2829,9 +2774,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE METHOD — HALF TOP/BOTTOM PADDING
-===================================================== */
+
 
 .service-page .service-method.section {
     padding-top: 48px !important;
@@ -2852,10 +2795,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE PAGES — MOBILE CENTERED SECTION TITLES
-   all service page section headings centered on mobile
-===================================================== */
+
 
 @media (max-width: 720px) {
 
@@ -2875,7 +2815,7 @@
         justify-self: center !important;
     }
 
-    /* текст под заголовками тоже ровно по центру */
+
     .service-page .section-text,
     .service-page .section-text.is-visible,
     .service-page .service-strategy__text,
@@ -2891,7 +2831,7 @@
         text-align: center !important;
     }
 
-    /* kicker тоже по центру, чтобы блок выглядел ровно */
+
     .service-page .section-kicker,
     .service-page .section-kicker.is-visible {
         width: fit-content !important;
@@ -2900,7 +2840,7 @@
         text-align: center !important;
     }
 
-    /* если заголовок лежит внутри left/sticky блока */
+
     .service-page .service-does__sticky,
     .service-page .service-faq__sticky,
     .service-page .deliverables-canvas__intro,
@@ -2912,11 +2852,9 @@
     }
 }
 
-/* =====================================================
-   SERVICE METHOD — STEP CARDS HOVER + RESPONSIVE LAYOUT
-===================================================== */
 
-/* desktop/tablet base hover */
+
+
 .service-page .service-method .method-step {
     position: relative;
     isolation: isolate;
@@ -3017,7 +2955,7 @@
     color: var(--color-text-dark);
 }
 
-/* TABLET: 3 compact cards in one premium row */
+
 @media (min-width: 721px) and (max-width: 980px) {
     .service-page .service-method__steps {
         display: grid !important;
@@ -3073,7 +3011,7 @@
     }
 }
 
-/* MOBILE: vertical compact cards */
+
 @media (max-width: 720px) {
     .service-page .service-method__steps {
         display: grid !important;
@@ -3143,9 +3081,7 @@
     }
 }
 
-/* =====================================================
-   SERVICE FAQ — HALF TOP/BOTTOM PADDING
-===================================================== */
+
 
 .service-page .service-faq.section {
     padding-top: 48px !important;
@@ -3166,21 +3102,19 @@
     }
 }
 
-/* =====================================================
-   SERVICE RELATED — COMPACT TOP + ICONS TOP RIGHT
-===================================================== */
 
-/* убираем верхний padding секции примерно в половину */
+
+
 .service-page .service-related.section {
     padding-top: 48px !important;
 }
 
-/* чуть компактнее верх внутри тёмной панели */
+
 .service-page .service-related__panel {
     padding-top: clamp(24px, 3vw, 34px) !important;
 }
 
-/* карточки ниже и аккуратнее */
+
 .service-page .related-card {
     position: relative !important;
     display: flex !important;
@@ -3190,7 +3124,7 @@
     overflow: hidden !important;
 }
 
-/* иконка справа сверху */
+
 .service-page .related-card__icon {
     position: absolute !important;
     top: 18px !important;
@@ -3213,7 +3147,7 @@
     padding: 0 !important;
 }
 
-/* чтобы заголовок не залезал под иконку */
+
 .service-page .related-card__title {
     max-width: 100% !important;
     padding-right: 4px !important;
@@ -3232,7 +3166,7 @@
     padding-top: 16px !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-page .service-related.section {
         padding-top: 38px !important;
@@ -3262,7 +3196,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-page .service-related.section {
         padding-top: 32px !important;

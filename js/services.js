@@ -86,9 +86,7 @@
         });
     };
 
-    /* ==============================
-       SERVICE HERO / BASIC DATA
-    ============================== */
+
 
     const renderServiceBasics = (service) => {
         setText(selectors.breadcrumbTitle, service.title);
@@ -129,9 +127,7 @@
         );
     };
 
-    /* ==============================
-       OVERVIEW METRICS
-    ============================== */
+
 
     const getMetrics = (service) => {
         const title = safeText(service.title);
@@ -257,9 +253,7 @@
             .join("");
     };
 
-    /* ==============================
-       BEST FOR
-    ============================== */
+
 
     const renderFitList = (service) => {
         const container = document.querySelector(selectors.fitList);
@@ -280,9 +274,7 @@
             .join("");
     };
 
-    /* ==============================
-       WHAT UNION DOES
-    ============================== */
+
 
     const renderDoesList = (service) => {
         const container = document.querySelector(selectors.doesList);
@@ -317,9 +309,7 @@
             .join("");
     };
 
-    /* ==============================
-       STRATEGY LAYER
-    ============================== */
+
 
     const renderStrategy = (service) => {
         setText(selectors.strategyText, service.strategyLayer);
@@ -366,9 +356,7 @@
             .join("");
     };
 
-    /* ==============================
-       DELIVERABLES
-    ============================== */
+
 
     const renderDeliverables = (service) => {
         const container = document.querySelector(selectors.deliverables);
@@ -402,9 +390,7 @@
             .join("");
     };
 
-    /* ==============================
-       METHOD STEPS
-    ============================== */
+
 
     const renderMethodSteps = () => {
         const container = document.querySelector(selectors.methodSteps);
@@ -448,9 +434,7 @@
             .join("");
     };
 
-    /* ==============================
-       FAQ
-    ============================== */
+
 
     const renderFaq = (service) => {
         const container = document.querySelector(selectors.faqList);
@@ -512,9 +496,7 @@
         });
     };
 
-    /* ==============================
-       RELATED SERVICES
-    ============================== */
+
 
     const renderRelatedServices = (service) => {
         const container = document.querySelector(selectors.relatedServices);
@@ -552,9 +534,7 @@
             .join("");
     };
 
-    /* ==============================
-       REVEAL ANIMATION
-    ============================== */
+
 
     const bindRevealOnScroll = () => {
         const items = document.querySelectorAll(selectors.revealItems);
@@ -590,9 +570,7 @@
         });
     };
 
-    /* ==============================
-       SCROLL BUTTON
-    ============================== */
+
 
     const bindScrollButton = () => {
         const button = document.querySelector(selectors.scrollButton);
@@ -611,17 +589,13 @@
         });
     };
 
-    /* ==============================
-       ACTIVE SERVICE CLASS
-    ============================== */
+
 
     const applyServiceBodyClass = (service) => {
         document.body.classList.add(`service-${service.id}`);
     };
 
-    /* ==============================
-       INIT
-    ============================== */
+
 
     const init = () => {
         const service = getCurrentService();

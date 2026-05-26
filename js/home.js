@@ -29,9 +29,7 @@
         }
     };
 
-    /* ==============================
-       FAQ
-    ============================== */
+
 
     const getFaqItems = () => {
         if (Array.isArray(config.faq) && config.faq.length) {
@@ -126,9 +124,7 @@
         });
     };
 
-    /* ==============================
-       FORM SERVICE OPTIONS
-    ============================== */
+
 
     const renderServiceOptions = () => {
         const selects = document.querySelectorAll(selectors.serviceSelect);
@@ -156,9 +152,7 @@
         });
     };
 
-    /* ==============================
-       FORM VALIDATION
-    ============================== */
+
 
     const isValidEmail = (value) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -290,9 +284,7 @@
         });
     };
 
-    /* ==============================
-       HERO PARALLAX / FLOATING
-    ============================== */
+
 
     const bindHeroParallax = () => {
         const hero = document.querySelector(selectors.hero);
@@ -334,9 +326,7 @@
         });
     };
 
-    /* ==============================
-       REVEAL ON SCROLL
-    ============================== */
+
 
     const bindRevealOnScroll = () => {
         const items = document.querySelectorAll(selectors.revealItems);
@@ -372,9 +362,7 @@
         });
     };
 
-    /* ==============================
-       SCROLL TO NEXT SECTION
-    ============================== */
+
 
     const bindHeroScrollButton = () => {
         const button = document.querySelector("[data-hero-scroll]");
@@ -393,9 +381,7 @@
         });
     };
 
-    /* ==============================
-       AUTO YEAR / SMALL TEXT FILLERS
-    ============================== */
+
 
     const applyInlineDynamicText = () => {
         document.querySelectorAll("[data-current-year]").forEach((element) => {
@@ -516,9 +502,7 @@
         initServiceCardLinks();
     }
 
-    /* ==============================
-       INIT
-    ============================== */
+
 
     const init = () => {
         renderFaq();

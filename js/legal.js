@@ -41,9 +41,7 @@
         }
     };
 
-    /* ==============================
-       ACTIVE LEGAL NAV
-    ============================== */
+
 
     const setActiveLegalNav = () => {
         const currentPage = getCurrentPage();
@@ -56,9 +54,7 @@
         });
     };
 
-    /* ==============================
-       DYNAMIC TEXT
-    ============================== */
+
 
     const applyDynamicText = () => {
         document.querySelectorAll(selectors.companyName).forEach((element) => {
@@ -92,9 +88,7 @@
         });
     };
 
-    /* ==============================
-       SMOOTH HASH LINKS
-    ============================== */
+
 
     const bindSmoothHashLinks = () => {
         document.addEventListener("click", (event) => {
@@ -118,9 +112,7 @@
         });
     };
 
-    /* ==============================
-       REVEAL ON SCROLL
-    ============================== */
+
 
     const bindRevealOnScroll = () => {
         const items = document.querySelectorAll(selectors.revealItems);
@@ -156,9 +148,7 @@
         });
     };
 
-    /* ==============================
-       PRINT BUTTON OPTIONAL SUPPORT
-    ============================== */
+
 
     const bindPrintButtons = () => {
         document.querySelectorAll("[data-print-page]").forEach((button) => {
@@ -168,9 +158,7 @@
         });
     };
 
-    /* ==============================
-       INIT
-    ============================== */
+
 
     const init = () => {
         setActiveLegalNav();
