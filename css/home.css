@@ -3865,3 +3865,76 @@
         margin-top: 18px !important;
     }
 }
+
+/* =====================================================
+   WHY UNION — MOBILE COMPACT CARDS
+   icons top-right, smaller card height
+===================================================== */
+
+@media (max-width: 720px) {
+    .home-page .why-union__grid {
+        gap: 12px !important;
+    }
+
+    .home-page .why-card {
+        position: relative !important;
+        min-height: 0 !important;
+        padding: 22px 76px 20px 20px !important;
+        overflow: hidden !important;
+    }
+
+    .home-page .why-card__icon {
+        position: absolute !important;
+        top: 18px !important;
+        right: 18px !important;
+        width: 44px !important;
+        height: 44px !important;
+        margin: 0 !important;
+        border-radius: 14px !important;
+    }
+
+    .home-page .why-card__icon i,
+    .home-page .why-card__icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .home-page .why-card__title {
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        line-height: 1.22 !important;
+    }
+
+    .home-page .why-card__text {
+        margin-top: 10px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .home-page .why-card__link {
+        margin-top: 14px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .home-page .why-card {
+        padding: 20px 68px 18px 18px !important;
+    }
+
+    .home-page .why-card__icon {
+        top: 16px !important;
+        right: 16px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .home-page .why-card__icon i,
+    .home-page .why-card__icon svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .home-page .why-card__text {
+        font-size: 0.84rem !important;
+    }
+}
