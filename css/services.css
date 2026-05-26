@@ -2111,3 +2111,304 @@
         transform: rotate(-6deg) scale(1.05) !important;
     }
 }
+
+/* =====================================================
+   SERVICE STRATEGY — COMPACT HORIZONTAL VERSION
+   for all service pages
+===================================================== */
+
+.service-page .service-strategy--compact {
+    background: var(--color-bg-white);
+}
+
+.service-page .service-strategy--compact.section {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+}
+
+.service-page .service-strategy--compact .service-strategy__panel {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(24px, 3vw, 34px) !important;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 2px solid rgba(11, 106, 97, 0.9);
+    background:
+        radial-gradient(circle at 8% 18%, rgba(255, 209, 90, 0.14), transparent 16rem),
+        radial-gradient(circle at 92% 30%, rgba(245, 161, 26, 0.12), transparent 18rem),
+        linear-gradient(135deg, #053633 0%, #063f3b 58%, #0a514b 100%);
+    box-shadow:
+        0 24px 64px rgba(5, 54, 51, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -14px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* main horizontal layout */
+.service-page .service-strategy--compact .service-strategy__grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) !important;
+    gap: 32px !important;
+    align-items: center !important;
+}
+
+/* left side */
+.service-page .service-strategy--compact .service-strategy__label {
+    width: fit-content;
+    min-height: 34px !important;
+    margin-bottom: 14px !important;
+    padding: 0 12px !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    font-size: 0.72rem !important;
+}
+
+.service-page .service-strategy--compact .service-strategy__label i,
+.service-page .service-strategy--compact .service-strategy__label svg {
+    color: var(--color-accent-gold) !important;
+}
+
+.service-page .service-strategy--compact .service-strategy__title {
+    max-width: 620px;
+    font-size: clamp(1.75rem, 3vw, 2.55rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.065em !important;
+}
+
+.service-page .service-strategy--compact .service-strategy__text {
+    max-width: 560px;
+    margin-top: 14px !important;
+    font-size: 0.92rem !important;
+    line-height: 1.58 !important;
+}
+
+/* right side: 3 compact columns, not big cards */
+.service-page .service-strategy--compact .service-strategy__cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    align-items: stretch;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.service-page .service-strategy--compact .strategy-card {
+    position: relative;
+    display: block !important;
+    min-height: 148px !important;
+    padding: 4px 18px 4px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transition:
+        transform 260ms ease,
+        background 260ms ease;
+}
+
+.service-page .service-strategy--compact .strategy-card+.strategy-card {
+    border-left: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+/* icon top-right */
+.service-page .service-strategy--compact .strategy-card__icon {
+    position: absolute !important;
+    top: 2px !important;
+    right: 16px !important;
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 !important;
+    border-radius: 14px !important;
+    color: var(--color-accent-gold) !important;
+    background: rgba(255, 255, 255, 0.09) !important;
+    box-shadow: none !important;
+    transition:
+        color 260ms ease,
+        background 260ms ease,
+        transform 260ms ease;
+}
+
+.service-page .service-strategy--compact .strategy-card__icon i,
+.service-page .service-strategy--compact .strategy-card__icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    stroke-width: 2.35 !important;
+}
+
+/* text */
+.service-page .service-strategy--compact .strategy-card>span:not(.strategy-card__icon) {
+    display: block !important;
+    padding-right: 42px;
+}
+
+.service-page .service-strategy--compact .strategy-card strong {
+    display: block;
+    color: #ffffff;
+    font-size: 0.94rem !important;
+    font-weight: 900;
+    line-height: 1.22 !important;
+    letter-spacing: -0.035em;
+}
+
+.service-page .service-strategy--compact .strategy-card>span:not(.strategy-card__icon)>span {
+    display: block;
+    margin-top: 8px !important;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.78rem !important;
+    font-weight: 600;
+    line-height: 1.45 !important;
+}
+
+/* hover */
+.service-page .service-strategy--compact .strategy-card::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-accent-orange);
+    opacity: 0;
+    transform: scaleX(0.35);
+    transform-origin: left;
+    transition:
+        opacity 260ms ease,
+        transform 320ms ease;
+}
+
+.service-page .service-strategy--compact .strategy-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.055) !important;
+}
+
+.service-page .service-strategy--compact .strategy-card:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.service-page .service-strategy--compact .strategy-card:hover .strategy-card__icon {
+    color: #111a19 !important;
+    background: var(--color-accent-orange) !important;
+    transform: rotate(-6deg) scale(1.05);
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-page .service-strategy--compact.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .service-page .service-strategy--compact .service-strategy__grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .service-page .service-strategy--compact .service-strategy__cards {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        padding-top: 20px;
+    }
+
+    .service-page .service-strategy--compact .strategy-card {
+        min-height: 132px !important;
+        padding: 0 16px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-page .service-strategy--compact.section {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .service-page .service-strategy--compact .service-strategy__panel {
+        padding: 22px 16px !important;
+        border-radius: 26px;
+    }
+
+    .service-page .service-strategy--compact .service-strategy__cards {
+        grid-template-columns: 1fr !important;
+        padding-top: 14px;
+    }
+
+    .service-page .service-strategy--compact .strategy-card {
+        min-height: auto !important;
+        padding: 15px 0 !important;
+    }
+
+    .service-page .service-strategy--compact .strategy-card+.strategy-card {
+        border-left: 0 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+    }
+
+    .service-page .service-strategy--compact .strategy-card__icon {
+        top: 14px !important;
+        right: 0 !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .service-page .service-strategy--compact .strategy-card>span:not(.strategy-card__icon) {
+        padding-right: 48px;
+    }
+
+    .service-page .service-strategy--compact .strategy-card::after {
+        left: 0;
+        right: 0;
+    }
+
+    .service-page .service-strategy--compact .strategy-card:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   SERVICE STRATEGY — ICON CENTER + HALF TOP PADDING
+===================================================== */
+
+/* убираем верхний padding секции примерно в половину */
+.service-page .service-strategy.section,
+.service-page .service-strategy--compact.section {
+    padding-top: 24px !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+
+    .service-page .service-strategy.section,
+    .service-page .service-strategy--compact.section {
+        padding-top: 20px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+
+    .service-page .service-strategy.section,
+    .service-page .service-strategy--compact.section {
+        padding-top: 16px !important;
+    }
+}
+
+/* ровное центрирование иконки внутри каждой strategy-card__icon */
+.service-page .strategy-card__icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+/* фикс для lucide svg / i */
+.service-page .strategy-card__icon i,
+.service-page .strategy-card__icon svg {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    transform-origin: center center !important;
+}
