@@ -3509,3 +3509,267 @@
         padding-bottom: 32px !important;
     }
 }
+
+/* =====================================================
+   PROOF LINE — CLEAN HORIZONTAL PREMIUM STRIP
+===================================================== */
+
+.home-page .proof-line {
+    background: var(--color-bg-white);
+}
+
+.home-page .proof-line__panel {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+    gap: 34px;
+    align-items: center;
+    padding: clamp(26px, 4vw, 42px);
+    border-radius: 34px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 8% 20%, rgba(255, 209, 90, 0.16), transparent 18rem),
+        radial-gradient(circle at 94% 40%, rgba(245, 161, 26, 0.12), transparent 18rem),
+        linear-gradient(135deg, #053633 0%, #063f3b 56%, #0a514b 100%);
+    box-shadow:
+        0 28px 74px rgba(5, 54, 51, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.home-page .proof-line__panel::before {
+    content: "“";
+    position: absolute;
+    left: 28px;
+    top: -42px;
+    color: var(--color-accent-orange);
+    font-size: clamp(8rem, 16vw, 14rem);
+    font-weight: 900;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.home-page .proof-line__panel::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.home-page .proof-line__main,
+.home-page .proof-line__points {
+    position: relative;
+    z-index: 2;
+}
+
+.home-page .proof-line__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 999px;
+    color: #111a19;
+    background: var(--color-accent-orange);
+    font-size: 0.74rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.home-page .proof-line__kicker i,
+.home-page .proof-line__kicker svg {
+    width: 15px;
+    height: 15px;
+    stroke-width: 2.6;
+}
+
+.home-page .proof-line__title {
+    max-width: 540px;
+    margin-top: 18px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.075em;
+}
+
+/* points */
+.home-page .proof-line__points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.home-page .proof-line__point {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    align-items: start;
+    min-height: 132px;
+    padding: 8px 20px;
+    transition:
+        transform 260ms ease,
+        background 260ms ease;
+}
+
+.home-page .proof-line__point+.proof-line__point {
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.home-page .proof-line__point i,
+.home-page .proof-line__point svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    color: var(--color-accent-gold);
+    stroke-width: 2.35;
+    transition:
+        color 260ms ease,
+        transform 260ms ease;
+}
+
+.home-page .proof-line__point strong {
+    display: block;
+    color: #ffffff;
+    font-size: 0.98rem;
+    font-weight: 900;
+    line-height: 1.22;
+    letter-spacing: -0.035em;
+}
+
+.home-page .proof-line__point small {
+    display: block;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+.home-page .proof-line__point:hover {
+    background: rgba(255, 255, 255, 0.065);
+    transform: translateY(-4px);
+}
+
+.home-page .proof-line__point:hover i,
+.home-page .proof-line__point:hover svg {
+    color: var(--color-accent-orange);
+    transform: rotate(-6deg) scale(1.08);
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .home-page .proof-line__panel {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .home-page .proof-line__title {
+        max-width: 760px;
+    }
+
+    .home-page .proof-line__points {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        padding-top: 22px;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .home-page .proof-line__panel {
+        padding: 22px 16px;
+        border-radius: 28px;
+    }
+
+    .home-page .proof-line__title {
+        font-size: clamp(1.85rem, 8.5vw, 2.55rem);
+    }
+
+    .home-page .proof-line__points {
+        display: flex;
+        gap: 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .home-page .proof-line__points::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-page .proof-line__point {
+        flex: 0 0 min(82vw, 280px);
+        min-height: 126px;
+        padding: 4px 18px;
+        scroll-snap-align: start;
+    }
+
+    .home-page .proof-line__point:first-child {
+        padding-left: 0;
+    }
+
+    .home-page .proof-line__point:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   PROOF LINE — QUOTE OUTSIDE PANEL
+   кавычка выходит хвостиками за panel
+===================================================== */
+
+.home-page .proof-line,
+.home-page .proof-line .container {
+    overflow: visible !important;
+}
+
+.home-page .proof-line__panel {
+    overflow: visible !important;
+}
+
+/* большая кавычка выходит за верх и левый край */
+.home-page .proof-line__panel::before {
+    content: "“" !important;
+    position: absolute !important;
+    left: -22px !important;
+    top: -58px !important;
+    z-index: 1 !important;
+
+    color: rgba(245, 161, 26, 0.72) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(10rem, 18vw, 16rem) !important;
+    font-weight: 900 !important;
+    line-height: 0.78 !important;
+
+    text-shadow:
+        0 0 26px rgba(245, 161, 26, 0.24),
+        0 22px 48px rgba(0, 0, 0, 0.22) !important;
+
+    transform: rotate(-5deg) !important;
+    pointer-events: none !important;
+}
+
+/* контент поверх кавычки */
+.home-page .proof-line__main,
+.home-page .proof-line__points {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* border панели тоже поверх */
+.home-page .proof-line__panel::after {
+    z-index: 2 !important;
+}
+
+@media (max-width: 720px) {
+    .home-page .proof-line__panel::before {
+        left: -10px !important;
+        top: -32px !important;
+        font-size: 9rem !important;
+        color: rgba(245, 161, 26, 0.58) !important;
+    }
+}
