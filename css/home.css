@@ -2430,3 +2430,307 @@
         transform: translateX(-50%) scale(1.19) !important;
     }
 }
+
+/* =====================================================
+   STATEMENT STRIP — PREMIUM MARQUEE
+===================================================== */
+
+.home-page .statement-strip--marquee {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 74px 0 58px !important;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(245, 161, 26, 0.09), transparent 18rem),
+        radial-gradient(circle at 86% 40%, rgba(11, 106, 97, 0.08), transparent 18rem),
+        #ffffff !important;
+}
+
+.statement-marquee__shell {
+    position: relative;
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+    padding: 34px 0;
+    overflow: hidden;
+    border: 1px solid rgba(6, 63, 59, 0.1);
+    border-radius: 34px;
+    background:
+        linear-gradient(135deg, rgba(250, 252, 251, 0.96), rgba(244, 247, 245, 0.9)),
+        #fafcfb;
+    box-shadow:
+        0 22px 58px rgba(8, 60, 57, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.statement-marquee__shell::before,
+.statement-marquee__shell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 6;
+    width: 18%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.statement-marquee__shell::before {
+    left: 0;
+    background: linear-gradient(90deg, #fafcfb 0%, rgba(250, 252, 251, 0) 100%);
+}
+
+.statement-marquee__shell::after {
+    right: 0;
+    background: linear-gradient(270deg, #fafcfb 0%, rgba(250, 252, 251, 0) 100%);
+}
+
+.statement-marquee__center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 209, 90, 0.18), transparent 55%),
+        linear-gradient(135deg, #053633, #0a514b);
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.18),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+.statement-marquee__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f5a11a;
+    box-shadow: 0 0 0 6px rgba(245, 161, 26, 0.16);
+}
+
+.statement-marquee {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.statement-marquee--top {
+    margin-bottom: 14px;
+    transform: rotate(-1.2deg);
+}
+
+.statement-marquee--bottom {
+    transform: rotate(1.2deg);
+}
+
+.statement-marquee__track {
+    display: flex;
+    width: max-content;
+    min-width: 200%;
+    gap: 12px;
+    animation: unionMarqueeLeft 28s linear infinite;
+    will-change: transform;
+}
+
+.statement-marquee--bottom .statement-marquee__track {
+    animation-name: unionMarqueeRight;
+    animation-duration: 32s;
+}
+
+.statement-marquee__track span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 0 18px;
+    border: 1px solid rgba(6, 63, 59, 0.1);
+    border-radius: 999px;
+    color: #111a19;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 12px 30px rgba(8, 60, 57, 0.08);
+    font-size: clamp(0.86rem, 1.25vw, 1rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
+}
+
+.statement-marquee__track i,
+.statement-marquee__track svg {
+    width: 17px;
+    height: 17px;
+    color: #f5a11a;
+    stroke-width: 2.6;
+}
+
+.statement-marquee--bottom .statement-marquee__track span {
+    color: rgba(255, 255, 255, 0.9);
+    background:
+        linear-gradient(135deg, rgba(5, 54, 51, 0.95), rgba(10, 81, 75, 0.92));
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 14px 34px rgba(5, 54, 51, 0.16);
+}
+
+.statement-marquee--bottom .statement-marquee__track i,
+.statement-marquee--bottom .statement-marquee__track svg {
+    color: #ffd15a;
+}
+
+@keyframes unionMarqueeLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes unionMarqueeRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 720px) {
+    .home-page .statement-strip--marquee {
+        padding: 48px 0 42px !important;
+    }
+
+    .statement-marquee__shell {
+        width: min(100% - 24px, var(--container));
+        padding: 28px 0;
+        border-radius: 26px;
+    }
+
+    .statement-marquee__center {
+        top: auto;
+        bottom: 16px;
+        min-height: 36px;
+        padding-inline: 14px;
+        font-size: 0.68rem;
+        transform: translateX(-50%);
+    }
+
+    .statement-marquee--top {
+        margin-bottom: 10px;
+        transform: rotate(-1deg);
+    }
+
+    .statement-marquee--bottom {
+        padding-bottom: 52px;
+        transform: rotate(1deg);
+    }
+
+    .statement-marquee__track {
+        gap: 9px;
+        animation-duration: 22s;
+    }
+
+    .statement-marquee--bottom .statement-marquee__track {
+        animation-duration: 26s;
+    }
+
+    .statement-marquee__track span {
+        min-height: 40px;
+        padding-inline: 14px;
+        font-size: 0.78rem;
+    }
+
+    .statement-marquee__track i,
+    .statement-marquee__track svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .statement-marquee__track {
+        animation-play-state: paused;
+    }
+}
+
+/* =====================================================
+   STATEMENT MARQUEE — FULL BLEED COMPACT VERSION
+===================================================== */
+
+.home-page .statement-strip--marquee {
+    padding: 36px 0 30px !important;
+    overflow: hidden !important;
+}
+
+/* убираем центральный бейдж, даже если HTML случайно останется */
+.statement-marquee__center {
+    display: none !important;
+}
+
+/* делаем блок на всю ширину экрана, за пределами контейнера */
+.statement-marquee__shell {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 18px 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* чтобы fade по краям был красивым на всю ширину */
+.statement-marquee__shell::before,
+.statement-marquee__shell::after {
+    width: 12% !important;
+}
+
+/* уменьшаем расстояние между двумя строками */
+.statement-marquee--top {
+    margin-bottom: 10px !important;
+}
+
+.statement-marquee__track span {
+    min-height: 42px !important;
+    padding: 0 16px !important;
+}
+
+/* мобильная версия компактнее */
+@media (max-width: 720px) {
+    .home-page .statement-strip--marquee {
+        padding: 24px 0 22px !important;
+    }
+
+    .statement-marquee__shell {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        padding: 14px 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .statement-marquee--top {
+        margin-bottom: 8px !important;
+    }
+
+    .statement-marquee--bottom {
+        padding-bottom: 0 !important;
+    }
+
+    .statement-marquee__track span {
+        min-height: 38px !important;
+        padding-inline: 13px !important;
+        font-size: 0.76rem !important;
+    }
+}
