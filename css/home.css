@@ -396,7 +396,7 @@
 }
 
 .ref-hero__decor-star--left {
-    left: 26px;
+    left: 15px;
     top: 120px;
     z-index: 6;
     width: 28px;
@@ -2169,4 +2169,32 @@
     }
 
    
+}
+
+/* =====================================================
+   REF HERO PERSON SIZE FIX
+   увеличиваем только фото, круг НЕ трогаем
+===================================================== */
+
+.home-page .ref-hero__visual {
+    --person-nudge-x: 0px;
+    --person-nudge-y: 42px;
+    --person-scale: 1.68;
+}
+
+/* увеличивает именно фото/человека */
+.home-page .ref-hero__person-wrap {
+    transform: translate(var(--person-nudge-x),
+            var(--person-nudge-y)) scale(var(--person-scale)) !important;
+
+    transform-origin: center bottom !important;
+}
+
+/* чтобы картинка не ограничивалась старым max-height */
+.home-page .ref-hero__person {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
 }
