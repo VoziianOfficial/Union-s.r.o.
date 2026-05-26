@@ -1641,3 +1641,34 @@ h6 {
         padding: 0 18px 18px;
     }
 }
+
+/* =====================================================
+   MOBILE MENU HARD FIX
+===================================================== */
+
+.mobile-menu {
+    z-index: 10000000 !important;
+    visibility: hidden;
+}
+
+.mobile-menu.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.mobile-menu__panel {
+    pointer-events: auto !important;
+}
+
+.mobile-menu__close,
+.burger {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto !important;
+}
+
+.mobile-menu__close *,
+.burger * {
+    pointer-events: none !important;
+}

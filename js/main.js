@@ -330,71 +330,81 @@
 
         document.body.insertAdjacentHTML("beforeend", createMobileMenuMarkup());
     };
+  const openMobileMenu = () => {
+    const menu = document.querySelector("[data-mobile-menu]");
+    const panel = document.querySelector("[data-mobile-menu-panel]");
+    const openButton = document.querySelector("[data-mobile-menu-open]");
 
-    const openMobileMenu = () => {
-        const menu = document.querySelector(selectors.mobileMenu);
-        const panel = document.querySelector(selectors.mobileMenuPanel);
-        const openButton = document.querySelector(selectors.mobileMenuOpen);
+    if (!menu || !panel) return;
 
-        if (!menu || !panel) return;
+    state.lastFocusedElement = document.activeElement;
 
-        state.lastFocusedElement = document.activeElement;
+    menu.classList.add("is-open");
+    menu.setAttribute("aria-hidden", "false");
+    document.body.classList.add("menu-open");
 
-        menu.classList.add("is-open");
-        document.body.classList.add("menu-open");
+    openButton?.setAttribute("aria-expanded", "true");
 
-        openButton?.setAttribute("aria-expanded", "true");
+    requestAnimationFrame(() => {
+      const closeButton = menu.querySelector("[data-mobile-menu-close]");
+      closeButton?.focus();
+    });
+  };
 
-        requestAnimationFrame(() => {
-            const firstFocusable = panel.querySelector(
-                'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
+  const closeMobileMenu = () => {
+    document.querySelectorAll("[data-mobile-menu]").forEach((menu) => {
+      menu.classList.remove("is-open");
+      menu.setAttribute("aria-hidden", "true");
+    });
 
-            firstFocusable?.focus();
-        });
-    };
+    document.body.classList.remove("menu-open");
 
-    const closeMobileMenu = () => {
-        const menu = document.querySelector(selectors.mobileMenu);
-        const openButton = document.querySelector(selectors.mobileMenuOpen);
+    document.querySelectorAll("[data-mobile-menu-open]").forEach((button) => {
+      button.setAttribute("aria-expanded", "false");
+    });
+  };
+  const bindMobileMenu = () => {
+    document.addEventListener(
+      "click",
+      (event) => {
+        const openButton = event.target.closest("[data-mobile-menu-open]");
+        const closeButton = event.target.closest("[data-mobile-menu-close]");
+        const menuLink = event.target.closest("[data-mobile-menu] a");
+        const menu = event.target.closest("[data-mobile-menu]");
+        const panel = event.target.closest("[data-mobile-menu-panel]");
 
-        if (!menu) return;
-
-        menu.classList.remove("is-open");
-        document.body.classList.remove("menu-open");
-
-        openButton?.setAttribute("aria-expanded", "false");
-
-        if (state.lastFocusedElement && typeof state.lastFocusedElement.focus === "function") {
-            state.lastFocusedElement.focus();
+        if (openButton) {
+          event.preventDefault();
+          event.stopPropagation();
+          openMobileMenu();
+          return;
         }
-    };
 
-    const bindMobileMenu = () => {
-        const openButton = document.querySelector(selectors.mobileMenuOpen);
-        const closeButton = document.querySelector(selectors.mobileMenuClose);
-        const menu = document.querySelector(selectors.mobileMenu);
-        const panel = document.querySelector(selectors.mobileMenuPanel);
+        if (closeButton) {
+          event.preventDefault();
+          event.stopPropagation();
+          closeMobileMenu();
+          return;
+        }
 
-        openButton?.addEventListener("click", openMobileMenu);
-        closeButton?.addEventListener("click", closeMobileMenu);
+        if (menuLink) {
+          closeMobileMenu();
+          return;
+        }
 
-        menu?.addEventListener("click", (event) => {
-            if (!panel?.contains(event.target)) {
-                closeMobileMenu();
-            }
-        });
+        if (menu && !panel) {
+          closeMobileMenu();
+        }
+      },
+      true
+    );
 
-        menu?.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMobileMenu);
-        });
-
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape" && menu?.classList.contains("is-open")) {
-                closeMobileMenu();
-            }
-        });
-    };
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMobileMenu();
+      }
+    });
+  };
 
     const bindServicesDropdown = () => {
         const buttons = document.querySelectorAll(selectors.servicesButton);
