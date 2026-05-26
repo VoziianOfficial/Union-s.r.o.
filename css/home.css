@@ -3025,3 +3025,176 @@
         padding-bottom: 24px !important;
     }
 }
+
+/* =====================================================
+   HOME PROCESS — COMPACT + HOVERS
+===================================================== */
+
+/* убираем верхние/нижние padding секции в половину */
+.home-page .home-process.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+@media (max-width: 980px) {
+    .home-page .home-process.section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .home-page .home-process.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+}
+
+/* hover для process-step */
+.home-page .process-step {
+    position: relative;
+    padding-inline: 14px !important;
+    border-radius: 20px;
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease;
+}
+
+.home-page .process-step:hover,
+.home-page .process-step.is-visible:hover {
+    transform: translateX(6px);
+    background: rgba(6, 63, 59, 0.045);
+    box-shadow: inset 3px 0 0 var(--color-accent-orange);
+}
+
+.home-page .process-step__number {
+    transition: color 260ms ease, transform 260ms ease;
+}
+
+.home-page .process-step:hover .process-step__number,
+.home-page .process-step.is-visible:hover .process-step__number {
+    color: var(--color-accent-orange);
+    transform: translateY(-1px);
+}
+
+.home-page .process-step__title {
+    position: relative;
+    display: inline;
+    background-image: linear-gradient(var(--color-accent-orange), var(--color-accent-orange));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    transition:
+        color 260ms ease,
+        background-size 320ms ease;
+}
+
+.home-page .process-step:hover .process-step__title,
+.home-page .process-step.is-visible:hover .process-step__title {
+    color: var(--color-accent-orange-hover);
+    background-size: 100% 2px;
+}
+
+.home-page .process-step__text {
+    transition: color 260ms ease;
+}
+
+.home-page .process-step:hover .process-step__text,
+.home-page .process-step.is-visible:hover .process-step__text {
+    color: var(--color-text-dark);
+}
+
+.home-page .process-step__button {
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease;
+}
+
+.home-page .process-step:hover .process-step__button,
+.home-page .process-step.is-visible:hover .process-step__button {
+    transform: translateX(5px) rotate(-8deg);
+    background: var(--color-accent-orange);
+    box-shadow: 0 14px 28px rgba(245, 161, 26, 0.26);
+}
+
+/* hover для process-fact */
+.home-page .process-fact {
+    position: relative;
+    padding: 0 12px 20px !important;
+    border-radius: 18px 18px 0 0;
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease;
+}
+
+.home-page .process-fact:hover,
+.home-page .process-fact.is-visible:hover {
+    transform: translateY(-4px);
+    border-bottom-color: var(--color-accent-orange);
+    background: rgba(245, 161, 26, 0.055);
+    box-shadow: inset 0 -2px 0 var(--color-accent-orange);
+}
+
+.home-page .process-fact strong {
+    transition: color 260ms ease, transform 260ms ease;
+}
+
+.home-page .process-fact:hover strong,
+.home-page .process-fact.is-visible:hover strong {
+    color: var(--color-accent-orange);
+    transform: translateY(-1px);
+}
+
+.home-page .process-fact span {
+    transition: color 260ms ease;
+}
+
+.home-page .process-fact:hover span,
+.home-page .process-fact.is-visible:hover span {
+    color: var(--color-text-dark);
+}
+
+/* на мобилке полностью убираем facts */
+@media (max-width: 720px) {
+    .home-page .home-process__facts {
+        display: none !important;
+    }
+
+    .home-page .process-step {
+        padding-inline: 10px !important;
+    }
+
+    .home-page .process-step:hover,
+    .home-page .process-step.is-visible:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   HOME PROCESS — BIGGER CIRCLE ON MOBILE
+===================================================== */
+
+@media (max-width: 720px) {
+    .home-page .home-process__circle {
+        width: min(100%, 390px) !important;
+    }
+
+    .home-page .home-process__visual {
+        min-height: 390px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .home-page .home-process__circle {
+        width: min(100%, 335px) !important;
+    }
+
+    .home-page .home-process__visual {
+        min-height: 350px !important;
+    }
+}
