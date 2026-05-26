@@ -1320,3 +1320,175 @@
         transform: none;
     }
 }
+
+/* =====================================================
+   SERVICE HERO — SAME OUTER STYLE AS HOME HERO
+   убираем белые боковые зоны и белый низ
+===================================================== */
+
+.service-page .service-hero-wrap {
+    position: relative;
+    overflow: visible !important;
+    padding-top: 104px !important;
+    padding-bottom: 30px !important;
+    background:
+        radial-gradient(circle at 4% 6%, rgba(255, 209, 90, 0.12), transparent 17rem),
+        radial-gradient(circle at 92% 14%, rgba(245, 161, 26, 0.08), transparent 18rem),
+        linear-gradient(180deg,
+            #053633 0%,
+            #063f3b 58%,
+            #042d2a 100%) !important;
+}
+
+/* убираем белую волну/белый низ */
+.service-page .service-hero::before,
+.service-page .service-hero::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* border + объем как на главной hero */
+.service-page .service-hero {
+    position: relative;
+    z-index: 1;
+    margin-top: 0 !important;
+    border-radius: 34px !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-bottom: 2px solid rgba(11, 106, 97, 0.95) !important;
+    box-shadow:
+        0 34px 90px rgba(0, 0, 0, 0.36),
+        0 18px 38px rgba(2, 24, 22, 0.42),
+        inset 0 -5px 0 rgba(11, 106, 97, 0.72),
+        inset 0 -18px 34px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* мягкая тень снизу под hero */
+.service-page .service-hero-wrap::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    z-index: 0;
+    width: min(82%, 1040px);
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.34);
+    filter: blur(24px);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* чтобы фон-картинка внутри не вылезала за новые бордеры */
+.service-page .service-hero__bg {
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-page .service-hero-wrap {
+        padding-top: 88px !important;
+        padding-bottom: 22px !important;
+        background:
+            radial-gradient(circle at 12% 4%, rgba(255, 209, 90, 0.12), transparent 16rem),
+            linear-gradient(180deg, #053633 0%, #063f3b 62%, #042d2a 100%) !important;
+    }
+
+    .service-page .service-hero {
+        width: min(100% - 28px, var(--container)) !important;
+        border-radius: 30px !important;
+    }
+
+    .service-page .service-hero-wrap::after {
+        bottom: 10px;
+        width: min(88%, 760px);
+        height: 34px;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-page .service-hero-wrap {
+        padding-top: 78px !important;
+        padding-bottom: 16px !important;
+    }
+
+    .service-page .service-hero {
+        width: min(100% - 20px, var(--container)) !important;
+        border-radius: 26px !important;
+        box-shadow:
+            0 24px 58px rgba(0, 0, 0, 0.32),
+            0 12px 26px rgba(2, 24, 22, 0.38),
+            inset 0 -4px 0 rgba(11, 106, 97, 0.72),
+            inset 0 -14px 26px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* =====================================================
+   SERVICE PAGES — FIXED HEADER
+   same behavior as home page header
+===================================================== */
+
+.service-page .site>[data-site-header] {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/* header inside wrapper */
+.service-page .site>[data-site-header] .site-header,
+.service-page .site>[data-site-header] .site-header--hero {
+    position: relative !important;
+    top: auto !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* если JS вдруг заменит wrapper на сам header */
+.service-page .site>.site-header,
+.service-page .site>.site-header--hero {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/* чтобы service hero не заезжал под fixed header */
+.service-page .service-hero-wrap {
+    padding-top: 104px !important;
+}
+
+@media (max-width: 980px) {
+
+    .service-page .site>[data-site-header],
+    .service-page .site>.site-header,
+    .service-page .site>.site-header--hero {
+        top: 10px !important;
+        width: min(100% - 28px, var(--container)) !important;
+    }
+
+    .service-page .service-hero-wrap {
+        padding-top: 88px !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .service-page .site>[data-site-header],
+    .service-page .site>.site-header,
+    .service-page .site>.site-header--hero {
+        width: min(100% - 20px, var(--container)) !important;
+    }
+
+    .service-page .service-hero-wrap {
+        padding-top: 78px !important;
+    }
+}
