@@ -419,6 +419,51 @@
         });
     };
 
+    const initServicesSwiper = () => {
+        const slider = document.querySelector("[data-services-swiper]");
+
+        if (!slider || typeof Swiper === "undefined") return;
+
+        new Swiper(slider, {
+            loop: true,
+            speed: 650,
+            spaceBetween: 16,
+            grabCursor: true,
+
+            autoplay: {
+                delay: 3200,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+
+            pagination: {
+                el: ".home-services__pagination",
+                clickable: true
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 12
+                },
+                721: {
+                    slidesPerView: 2,
+                    spaceBetween: 14
+                },
+                981: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                }
+            }
+        });
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initServicesSwiper);
+    } else {
+        initServicesSwiper();
+    }
+
     /* ==============================
        INIT
     ============================== */

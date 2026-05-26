@@ -11,6 +11,7 @@
 
     <link rel="icon" href="./assets/icons/favicon.svg?v=2" type="image/svg+xml" />
     <link rel="shortcut icon" href="./assets/icons/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/home.css" />
@@ -324,90 +325,96 @@
                             </a>
                         </div>
 
-                        <div class="home-services__grid">
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="mouse-pointer-click"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">Google Ads</h3>
-                                <p class="service-preview-card__text">
-                                    Campaign structure, intent mapping, ad copy direction, and landing page alignment.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./google-ads.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
-
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="search"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">SEO Optimization</h3>
-                                <p class="service-preview-card__text">
-                                    Technical SEO, metadata, content structure, internal links, and search intent.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./seo-optimization.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
-
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="megaphone"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">Social Media Marketing</h3>
-                                <p class="service-preview-card__text">
-                                    Content rhythm, brand voice, campaign themes, and audience attention.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./social-media-marketing.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
-
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="layout-dashboard"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">Web Design</h3>
-                                <p class="service-preview-card__text">
-                                    Responsive layouts, visual hierarchy, UX clarity, and service page structure.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./web-design.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
-
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="target"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">Conversion Boost</h3>
-                                <p class="service-preview-card__text">
-                                    CTA clarity, trust signals, forms, user flow, and friction reduction.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./conversion-boost.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
-
-                            <article class="service-preview-card" data-reveal>
-                                <span class="service-preview-card__icon" aria-hidden="true">
-                                    <i data-lucide="map-pin"></i>
-                                </span>
-                                <h3 class="service-preview-card__title">Local SEO</h3>
-                                <p class="service-preview-card__text">
-                                    Service area clarity, location content, local pages, and local search signals.
-                                </p>
-                                <a class="text-link service-preview-card__link" href="./local-seo.html">
-                                    <span>Explore service</span>
-                                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </article>
+                        <div class="home-services__slider swiper" data-services-swiper>
+                            <div class="swiper-wrapper">
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="mouse-pointer-click"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">Google Ads</h3>
+                                    <p class="service-preview-card__text">
+                                        Campaign structure, intent mapping, ad copy direction, and landing page alignment.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./google-ads.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="search"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">SEO Optimization</h3>
+                                    <p class="service-preview-card__text">
+                                        Technical SEO, metadata, content structure, internal links, and search intent.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./seo-optimization.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="megaphone"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">Social Media Marketing</h3>
+                                    <p class="service-preview-card__text">
+                                        Content rhythm, brand voice, campaign themes, and audience attention.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./social-media-marketing.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="layout-dashboard"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">Web Design</h3>
+                                    <p class="service-preview-card__text">
+                                        Responsive layouts, visual hierarchy, UX clarity, and service page structure.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./web-design.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="target"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">Conversion Boost</h3>
+                                    <p class="service-preview-card__text">
+                                        CTA clarity, trust signals, forms, user flow, and friction reduction.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./conversion-boost.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                                <article class="service-preview-card swiper-slide" data-reveal>
+                                    <span class="service-preview-card__icon" aria-hidden="true">
+                                        <i data-lucide="map-pin"></i>
+                                    </span>
+                                    <h3 class="service-preview-card__title">Local SEO</h3>
+                                    <p class="service-preview-card__text">
+                                        Service area clarity, location content, local pages, and local search signals.
+                                    </p>
+                                    <a class="text-link service-preview-card__link" href="./local-seo.html">
+                                        <span>Explore service</span>
+                                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                                    </a>
+                                </article>
+                        
+                            </div>
+                        
+                            <div class="home-services__pagination swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -728,6 +735,7 @@
         <div data-site-footer></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/main.js"></script>
