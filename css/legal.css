@@ -772,3 +772,217 @@
         gap: 6px;
     }
 }
+
+/* =====================================================
+   LEGAL HERO — DARK OUTER FIX
+   убираем белое и делаем нормальный низ
+===================================================== */
+
+.legal-page .legal-hero-wrap {
+    position: relative;
+    overflow: visible !important;
+    padding-top: 104px !important;
+    padding-bottom: 30px !important;
+    background:
+        radial-gradient(circle at 4% 6%, rgba(255, 209, 90, 0.12), transparent 17rem),
+        radial-gradient(circle at 92% 14%, rgba(245, 161, 26, 0.08), transparent 18rem),
+        linear-gradient(180deg,
+            #053633 0%,
+            #063f3b 58%,
+            #042d2a 100%) !important;
+}
+
+/* убираем белый низ / волну, если она есть */
+.legal-page .legal-hero::before,
+.legal-page .legal-hero::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* сама hero-card как на главной */
+.legal-page .legal-hero {
+    position: relative;
+    z-index: 1;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+    border-radius: 34px !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-bottom: 2px solid rgba(11, 106, 97, 0.95) !important;
+    background:
+        radial-gradient(circle at 76% 20%, rgba(255, 209, 90, 0.14), transparent 28%),
+        linear-gradient(135deg, #053633 0%, #063f3b 52%, #0a514b 100%) !important;
+    box-shadow:
+        0 34px 90px rgba(0, 0, 0, 0.36),
+        0 18px 38px rgba(2, 24, 22, 0.42),
+        inset 0 -5px 0 rgba(11, 106, 97, 0.72),
+        inset 0 -18px 34px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* мягкая тень под блоком */
+.legal-page .legal-hero-wrap::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    z-index: 0;
+    width: min(82%, 1040px);
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.34);
+    filter: blur(24px);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* чтобы внутри не было лишнего белого снизу */
+.legal-page .legal-hero__content {
+    padding-bottom: clamp(56px, 7vw, 92px) !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .legal-page .legal-hero-wrap {
+        padding-top: 88px !important;
+        padding-bottom: 22px !important;
+        background:
+            radial-gradient(circle at 12% 4%, rgba(255, 209, 90, 0.12), transparent 16rem),
+            linear-gradient(180deg, #053633 0%, #063f3b 62%, #042d2a 100%) !important;
+    }
+
+    .legal-page .legal-hero {
+        width: min(100% - 28px, var(--container)) !important;
+        border-radius: 30px !important;
+    }
+
+    .legal-page .legal-hero-wrap::after {
+        bottom: 10px;
+        width: min(88%, 760px);
+        height: 34px;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .legal-page .legal-hero-wrap {
+        padding-top: 78px !important;
+        padding-bottom: 16px !important;
+    }
+
+    .legal-page .legal-hero {
+        width: min(100% - 20px, var(--container)) !important;
+        border-radius: 26px !important;
+        box-shadow:
+            0 24px 58px rgba(0, 0, 0, 0.32),
+            0 12px 26px rgba(2, 24, 22, 0.38),
+            inset 0 -4px 0 rgba(11, 106, 97, 0.72),
+            inset 0 -14px 26px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .legal-page .legal-hero__content {
+        padding-bottom: 56px !important;
+    }
+}
+
+/* =====================================================
+   LEGAL HERO — EXTRA COMPACT HEIGHT
+   lower hero height on legal pages
+===================================================== */
+
+.legal-page .legal-hero {
+    min-height: 340px !important;
+}
+
+.legal-page .legal-hero__content {
+    min-height: 300px !important;
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+}
+
+.legal-page .legal-hero__inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.legal-page .legal-hero__breadcrumb {
+    margin-bottom: 14px !important;
+}
+
+.legal-page .legal-hero__eyebrow {
+    margin-bottom: 14px !important;
+}
+
+.legal-page .legal-hero__title {
+    margin-bottom: 0 !important;
+}
+
+.legal-page .legal-hero__text {
+    margin-top: 16px !important;
+}
+
+.legal-page .legal-hero__meta {
+    margin-top: 22px !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .legal-page .legal-hero {
+        min-height: 310px !important;
+    }
+
+    .legal-page .legal-hero__content {
+        min-height: 280px !important;
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .legal-page .legal-hero__text {
+        margin-top: 14px !important;
+    }
+
+    .legal-page .legal-hero__meta {
+        margin-top: 18px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .legal-page .legal-hero {
+        min-height: 290px !important;
+    }
+
+    .legal-page .legal-hero__content {
+        min-height: 260px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .legal-page .legal-hero__breadcrumb {
+        margin-bottom: 12px !important;
+    }
+
+    .legal-page .legal-hero__eyebrow {
+        margin-bottom: 12px !important;
+    }
+
+    .legal-page .legal-hero__text {
+        margin-top: 12px !important;
+    }
+
+    .legal-page .legal-hero__meta {
+        margin-top: 16px !important;
+    }
+}
+
+/* very small mobile */
+@media (max-width: 460px) {
+    .legal-page .legal-hero {
+        min-height: 270px !important;
+    }
+
+    .legal-page .legal-hero__content {
+        min-height: 245px !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+}
