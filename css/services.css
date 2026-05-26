@@ -1766,3 +1766,230 @@
         padding-bottom: 32px !important;
     }
 }
+
+/* =====================================================
+   SERVICE DOES — CLEAN EDITORIAL RAIL
+   compact, light, horizontal, no cards inside cards
+===================================================== */
+
+.service-page .service-does--clean {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(245, 161, 26, 0.055), transparent 18rem),
+        var(--color-bg-white);
+}
+
+.service-page .service-does--clean.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+/* общая сетка — спокойная, без sticky-хаоса */
+.service-page .service-does--clean .service-does__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 48px;
+    align-items: center;
+}
+
+/* убираем sticky, чтобы секция была компактной */
+.service-page .service-does--clean .service-does__sticky {
+    position: relative !important;
+    top: auto !important;
+    max-width: 560px;
+}
+
+/* правая часть — не карточки, а editorial-list */
+.service-page .service-does--clean .service-does__list {
+    display: grid;
+    gap: 0 !important;
+    border-top: 1px solid rgba(6, 63, 59, 0.14);
+    border-bottom: 1px solid rgba(6, 63, 59, 0.14);
+}
+
+/* каждый пункт — строка, НЕ карточка */
+.service-page .service-does--clean .does-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 18px;
+    align-items: start;
+    min-height: auto !important;
+    padding: 22px 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    transition:
+        transform 260ms ease,
+        background 260ms ease;
+}
+
+.service-page .service-does--clean .does-item+.does-item {
+    border-top: 1px solid rgba(6, 63, 59, 0.14) !important;
+}
+
+/* тонкая hover-линия слева */
+.service-page .service-does--clean .does-item::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 18px;
+    bottom: 18px;
+    width: 3px;
+    border-radius: 999px;
+    background: var(--color-accent-orange);
+    opacity: 0;
+    transform: scaleY(0.45);
+    transition:
+        opacity 260ms ease,
+        transform 320ms ease;
+}
+
+/* иконка без тяжелой подложки */
+.service-page .service-does--clean .does-item__icon {
+    display: grid !important;
+    width: 44px !important;
+    height: 44px !important;
+    place-items: center !important;
+    margin: 0 !important;
+
+    border-radius: 0 !important;
+    color: var(--color-accent-orange) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    transition:
+        transform 260ms ease,
+        color 260ms ease;
+}
+
+.service-page .service-does--clean .does-item__icon i,
+.service-page .service-does--clean .does-item__icon svg {
+    width: 25px !important;
+    height: 25px !important;
+    stroke-width: 2.35 !important;
+}
+
+/* текст */
+.service-page .service-does--clean .does-item__title {
+    color: var(--color-text-dark);
+    font-size: 1.05rem;
+    font-weight: 900;
+    line-height: 1.24;
+    letter-spacing: -0.04em;
+    transition: color 260ms ease;
+}
+
+.service-page .service-does--clean .does-item__text {
+    max-width: 620px;
+    margin-top: 7px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 550;
+    line-height: 1.58;
+    transition: color 260ms ease;
+}
+
+/* hover — дорогой, но без карточек */
+.service-page .service-does--clean .does-item:hover {
+    transform: translateX(8px);
+    background: linear-gradient(90deg,
+            rgba(245, 161, 26, 0.055),
+            transparent 62%) !important;
+}
+
+.service-page .service-does--clean .does-item:hover::before {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.service-page .service-does--clean .does-item:hover .does-item__icon {
+    color: var(--color-bg-dark) !important;
+    transform: rotate(-6deg) scale(1.06);
+}
+
+.service-page .service-does--clean .does-item:hover .does-item__title {
+    color: var(--color-accent-orange-hover);
+}
+
+.service-page .service-does--clean .does-item:hover .does-item__text {
+    color: var(--color-text-dark);
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-page .service-does--clean.section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .service-page .service-does--clean .service-does__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .service-page .service-does--clean .service-does__sticky {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .service-page .service-does--clean .does-item {
+        padding: 18px 0 !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-page .service-does--clean.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .service-page .service-does--clean .service-does__grid {
+        gap: 22px;
+    }
+
+    .service-page .service-does--clean .service-does__sticky {
+        text-align: left;
+    }
+
+    .service-page .service-does--clean .does-item {
+        grid-template-columns: 34px 1fr;
+        gap: 13px;
+        padding: 16px 0 !important;
+    }
+
+    .service-page .service-does--clean .does-item::before {
+        left: -10px;
+        top: 16px;
+        bottom: 16px;
+    }
+
+    .service-page .service-does--clean .does-item__icon {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .service-page .service-does--clean .does-item__icon i,
+    .service-page .service-does--clean .does-item__icon svg {
+        width: 21px !important;
+        height: 21px !important;
+    }
+
+    .service-page .service-does--clean .does-item__title {
+        font-size: 0.98rem;
+    }
+
+    .service-page .service-does--clean .does-item__text {
+        font-size: 0.84rem;
+        line-height: 1.5;
+    }
+
+    .service-page .service-does--clean .does-item:hover {
+        transform: none;
+    }
+}
+
