@@ -986,3 +986,118 @@
         padding-bottom: 24px !important;
     }
 }
+
+/* =====================================================
+   LEGAL NOTE ICON — TRUE CENTER FIX
+===================================================== */
+
+.legal-page .legal-note__icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+
+    padding: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+.legal-page .legal-note__icon i,
+.legal-page .legal-note__icon svg {
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+
+    transform: none !important;
+    transform-origin: center center !important;
+}
+
+@media (max-width: 720px) {
+    .legal-page .legal-note__icon {
+        flex-basis: 38px !important;
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .legal-page .legal-note__icon i,
+    .legal-page .legal-note__icon svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
+
+/* =====================================================
+   LEGAL PAGES — FIXED HEADER
+   same sticky header behavior as home/service pages
+===================================================== */
+
+.legal-page .site>[data-site-header] {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/* header inside injected wrapper */
+.legal-page .site>[data-site-header] .site-header,
+.legal-page .site>[data-site-header] .site-header--hero {
+    position: relative !important;
+    top: auto !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* если JS вставит header напрямую без wrapper */
+.legal-page .site>.site-header,
+.legal-page .site>.site-header--hero {
+    position: fixed !important;
+    top: 14px !important;
+    left: 50% !important;
+    z-index: 999999 !important;
+    width: min(100% - 40px, var(--container)) !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/* чтобы legal hero не залезал под fixed header */
+.legal-page .legal-hero-wrap {
+    padding-top: 104px !important;
+}
+
+@media (max-width: 980px) {
+
+    .legal-page .site>[data-site-header],
+    .legal-page .site>.site-header,
+    .legal-page .site>.site-header--hero {
+        top: 10px !important;
+        width: min(100% - 28px, var(--container)) !important;
+    }
+
+    .legal-page .legal-hero-wrap {
+        padding-top: 88px !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .legal-page .site>[data-site-header],
+    .legal-page .site>.site-header,
+    .legal-page .site>.site-header--hero {
+        width: min(100% - 20px, var(--container)) !important;
+    }
+
+    .legal-page .legal-hero-wrap {
+        padding-top: 78px !important;
+    }
+}
