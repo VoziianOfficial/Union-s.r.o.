@@ -3773,3 +3773,43 @@
         color: rgba(245, 161, 26, 0.58) !important;
     }
 }
+
+/* =====================================================
+   PROOF LINE — TABLET QUOTE LOWER
+===================================================== */
+
+@media (min-width: 721px) and (max-width: 1024px) {
+    .home-page .proof-line__panel::before {
+        top: -34px !important;
+        left: -18px !important;
+        font-size: clamp(9rem, 18vw, 13rem) !important;
+    }
+}
+
+/* =====================================================
+   PROOF LINE — HALF TOP/BOTTOM PADDING
+===================================================== */
+
+.home-page .home-proof.section,
+.home-page .proof-line.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+@media (max-width: 980px) {
+
+    .home-page .home-proof.section,
+    .home-page .proof-line.section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .home-page .home-proof.section,
+    .home-page .proof-line.section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+}
